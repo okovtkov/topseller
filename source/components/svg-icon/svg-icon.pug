@@ -1,0 +1,6 @@
+include ./icons/icon-logo
+include ./icons/icon-pro
+
+mixin svg-icon(name)
+    - let fullName = `icon-${name}`;
+    +#{fullName}

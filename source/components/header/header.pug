@@ -1,0 +1,12 @@
+include ../svg-icon/svg-icon
+include ../navigation/navigation
+include ../positioner/positioner
+
+mixin header
+    +positioner('header').header
+        button.header__burger
+        a.header__logo(href="#")
+            +svg-icon('logo')
+        +navigation.header__navigation
+        a.header__logo_pro(href="#")
+            +svg-icon('pro').header__logo_pro
