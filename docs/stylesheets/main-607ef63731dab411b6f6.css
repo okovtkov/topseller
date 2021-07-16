@@ -1,0 +1,157 @@
+.header {
+  display: flex;
+  padding: 35px 0;
+}
+@media screen and (min-width: 640px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.header__logo {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 640px) {
+  .header__logo {
+    margin: 0;
+  }
+}
+
+.header__logo_pro {
+  display: none;
+  text-decoration: none;
+  margin-top: auto;
+}
+@media screen and (min-width: 810px) {
+  .header__logo_pro {
+    display: block;
+    margin-top: 7px;
+  }
+}
+
+.header__burger {
+  position: relative;
+  width: 38px;
+  height: 2px;
+  background-color: #696FFB;
+  vertical-align: top;
+  margin-top: 4px;
+  border: none;
+  outline: none;
+}
+.header__burger::before, .header__burger::after {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 38px;
+  height: 2px;
+  background-color: #696FFB;
+  content: "";
+}
+.header__burger::after {
+  top: 16px;
+  width: 25px;
+}
+@media screen and (min-width: 640px) {
+  .header__burger {
+    display: none;
+  }
+}
+.navigation {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 220px;
+  padding: 60px 10% 0 20px;
+  background-color: #696FFB;
+  transition: left 0.5s ease;
+}
+
+@media screen and (min-width: 640px) {
+  .navigation {
+    position: relative;
+    left: 0;
+    display: inline-block;
+    width: 80%;
+    padding: 0;
+    background-color: transparent;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 810px) {
+  .navigation {
+    width: 60%;
+  }
+}
+.navigation__close {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  height: 0;
+  width: 0;
+}
+
+.navigation__close::before,
+.navigation__close::after {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  transform: rotate(45deg);
+  font-size: 20px;
+  color: #fff;
+  content: "|";
+}
+
+.navigation__close::after {
+  left: 18px;
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 640px) {
+  .navigation__close::before,
+.navigation__close::after {
+    display: none;
+  }
+}
+.navigation_open {
+  left: 0;
+}
+
+.navigation__link {
+  display: block;
+  margin: 15px 0;
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+}
+
+@media screen and (min-width: 640px) {
+  .navigation__link {
+    display: inline-block;
+    width: auto;
+    margin: 4px 0;
+    margin-right: 7%;
+    color: #000;
+  }
+  .navigation__link:last-child {
+    margin-right: 0;
+  }
+  .navigation__link:hover {
+    color: #373ffa;
+  }
+}
+.navigation__contacts {
+  display: block;
+  margin-top: auto;
+}
+
+@media screen and (min-width: 640px) {
+  .navigation__contacts {
+    display: none;
+  }
+}
