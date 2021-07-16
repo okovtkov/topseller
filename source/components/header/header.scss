@@ -1,4 +1,4 @@
-$hover: #696FFB;
+$primary-color: #696FFB;
 
 .header {
     display: flex;
@@ -34,7 +34,7 @@ $hover: #696FFB;
     position: relative;
     width: 38px;
     height: 2px;
-    background-color: $hover;
+    background-color: $primary-color;
     vertical-align: top;
     margin-top: 4px;
     border: none;
@@ -46,7 +46,7 @@ $hover: #696FFB;
         left: 0;
         width: 38px;
         height: 2px;
-        background-color: $hover;
+        background-color: inherit;
         content: '';
     }
     &::after {
