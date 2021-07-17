@@ -1,0 +1,10 @@
+include ../positioner/positioner
+
+
+mixin video
+    +positioner.video
+        video.video__player(preload="none" src="/video/callback.mp4")
+        button.video__play
+        .video__information
+            p.video__name Первичная настройка интеграции
+            p.video__time ~ 7 мин

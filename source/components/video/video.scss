@@ -1,0 +1,111 @@
+.video {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 15px 30px rgba(65, 74, 85, 0.1);
+    background: linear-gradient(90deg, #D0F4FF -1.26%, #EDE1FF 104.19%);
+    border-radius: 10px;
+
+    @media screen and (min-width: 375px) {
+        min-height: 234px;
+    }
+
+    @media screen and (min-width: 425px) {
+        min-height: 255px;
+    }
+
+    @media screen and (min-width: 540px) {
+        min-height: 300px;
+    }
+
+    @media screen and (min-width: 768px) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.video__play {
+    position: absolute;
+    top: calc(50% - 32.5px);
+    left: calc(50% - 32.5px);
+    height: 65px;
+    width: 65px;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    border: none;
+    &::after {
+        position: absolute;
+        top: 18.5px;
+        left: 26.5px;
+        border-top: 15px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 20px solid white;
+        content: '';
+    }
+    &:hover {
+        cursor: pointer;
+    }
+
+    @media screen and (min-width: 375px) {
+        top: calc(50% - 40px);
+    }
+
+    @media screen and (min-width: 425px) {
+        top: calc(50% - 32.5px);
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 80px;
+        height: 80px;
+        &::after {
+            top: 21px;
+            left: 32px;
+            border-top: 20px solid transparent;
+            border-right: 24px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-left: 24px solid white;
+        }
+    }
+}
+
+.video p {
+    margin: 0;
+    margin-top: 4px;
+    padding: 0;
+}
+
+.video__information {
+    position: absolute;
+    bottom: 9px;
+    left: 9px;
+    display: none;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    height: 59px;
+    margin-left: 9px;
+    margin-bottom: 11px;
+    padding-left: 11px;
+    padding-top: 8px;
+    padding-bottom: 11px;
+    padding-right: 11px;
+    color: white;
+    font-weight: bold;
+
+    @media screen and (min-width: 375px) {
+        display: block;
+    }
+
+    @media screen and (min-width: 425px) {
+        width: auto;
+    }
+}
+
+.video__name {
+    font-size: 16px;
+}
+
+.video__time {
+    font-size: 12px;
+}

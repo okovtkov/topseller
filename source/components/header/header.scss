@@ -33,16 +33,28 @@ $primary-color: #696FFB;
 .header__burger {
     position: relative;
     width: 38px;
-    height: 2px;
-    background-color: $primary-color;
+    height: 22px;
+    background-color: white;
     vertical-align: top;
-    margin-top: 4px;
     border: none;
     outline: none;
+
+    @media screen and (min-width: 640px) {
+        display: none;
+    }
+}
+
+.header__line {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 38px;
+    height: 2px;
+    background-color: $primary-color;
     &::before,
     &::after {
         position: absolute;
-        top: 8px;
+        top: 10px;
         left: 0;
         width: 38px;
         height: 2px;
@@ -50,11 +62,7 @@ $primary-color: #696FFB;
         content: '';
     }
     &::after {
-        top: 16px;
+        top: 20px;
         width: 25px;
-    }
-
-    @media screen and (min-width: 640px) {
-        display: none;
     }
 }

@@ -9,7 +9,7 @@ class Menu {
         this.burger.addEventListener('click', () => this.open());
         this.closeButton.addEventListener('click', () => this.close());
         document.addEventListener('click', (event) => {
-            if (!event.target.closest('.navigation') && event.target !== this.burger) 
+            if (!event.target.closest('.navigation') && !event.target.closest('.header__burger')) 
                 this.close();
         });
     }
