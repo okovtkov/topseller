@@ -1,0 +1,24 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    color: black;
+    background-color: #fff;
+}
+.positioner {
+    width: 88%;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+    .positioner {
+        width: auto;
+        margin-left: 2.343%;
+        margin-right: 2.343%;
+    }
+}
+
