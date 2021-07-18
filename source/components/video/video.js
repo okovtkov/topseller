@@ -3,15 +3,14 @@
 class Video {
     constructor(element) {
         this.element = element;
-        this.play = this.element.querySelector('.video__play');
+        let play = this.element.querySelector('.video__play');
         this.player = this.element.querySelector('.video__player');
 
-        this.play.addEventListener('click', () => this.onPlay());
+        play.addEventListener('click', () => this.onPlay());
         this.player.addEventListener('pause', () => this.pause());
     }
 
     onPlay() {
-        console.log(this.element)
         if (this.element.classList.contains('video_active')) {
             this.player.pause();
         } else {
