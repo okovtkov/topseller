@@ -2,8 +2,11 @@ include ../positioner/positioner
 
 
 mixin video
-    +positioner.video
-        video.video__player(preload="none" src="/video/callback.mp4")
+    .video
+        video.video__player(preload="none" src="/video/rocknroll.mp4")
+            source(src="/video/rocknroll.mp4" type="video/mp4")
+            source(src="/video/rocknroll.mp4" type="video/ogg")
+            source(src="/video/rocknroll.mp4" type="video/webm")
         button.video__play
         .video__information
             p.video__name Первичная настройка интеграции

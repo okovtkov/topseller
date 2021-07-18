@@ -3,3 +3,4 @@ import "../components/navigation/navigation.scss";
 import "../components/navigation/navigation.js";
 import "../components/video/video.scss";
 import "../components/video/video.js";
+import "../components/description/description.scss";

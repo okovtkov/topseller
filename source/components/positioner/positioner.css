@@ -1,5 +1,12 @@
 .positioner {
-    width: 87.7%;
-    max-width: 1170px;
+    width: 88%;
     margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+    .positioner {
+        width: auto;
+        margin-left: 2.343%;
+        margin-right: 2.343%;
+    }
 }

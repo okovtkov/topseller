@@ -1,22 +1,30 @@
 'use strict';
 
-class Player {
-    constructor() {
-        this.play = document.querySelector('.video__play');
-        this.play.addEventListener('click', () => this.start());
+class Video {
+    constructor(element) {
+        this.element = element;
+        this.play = this.element.querySelector('.video__play');
+        this.player = this.element.querySelector('.video__player');
+
+        this.play.addEventListener('click', () => this.onPlay());
+        this.player.addEventListener('pause', () => this.pause());
     }
 
-    start() {
-        let container = document.querySelector('.video');
-        let information = document.querySelector('.video__information');
-        let player = document.querySelector('.video__player');
+    onPlay() {
+        console.log(this.element)
+        if (this.element.classList.contains('video_active')) {
+            this.player.pause();
+        } else {
+            this.element.classList.add('video_active');
+            this.player.setAttribute('controls', true);
+            this.player.play();
+        }
+    }
 
-        player.setAttribute('controls', true);
-        information.style.display = 'none';
-        this.play.style.display = 'none';
-        container.style.background = 'none';
-        container.style.minHeight = 'auto';
+    pause() {
+        this.element.classList.remove('video_active');
     }
 }
 
-new Player();
+let element = document.querySelector('.video');
+new Video(element);

@@ -24,14 +24,14 @@ $primary-color: #696FFB;
     text-decoration: none;
     margin-top: auto;
 
-    @media screen and (min-width: 810px) {
+    @media screen and (min-width: 1024px) {
         display: block;
         margin-top: 7px;
     }
 }
 
 .header__burger {
-    position: relative;
+    position: absolute;
     width: 38px;
     height: 22px;
     background-color: white;
