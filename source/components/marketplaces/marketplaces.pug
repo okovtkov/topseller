@@ -1,7 +1,12 @@
 include ../svg-icon/svg-icon
+include ../marketplaces-icons/marketplaces-icons
+include ../button/button
 
 mixin marketplaces
     section.marketplaces
-        +svg-icon('wildberries')
-        +svg-icon('yandex')
-        +svg-icon('ozon')
+        +marketplaces-icons.marketplaces__icons
+        h1.marketplaces__title Все маркетплейсы <br>
+            div в <span>одном</span> приложении
+        p.marketplaces__text Мы объеденили не объеденяемое, чтобы вам было удобнее работать.
+        +button('Подробнее').marketplaces__button
+        a.marketpaces__price(href="#") Прайс-лист

@@ -1,13 +1,14 @@
 include ../positioner/positioner
-
+include ../svg-icon/svg-icon
 
 mixin video
     .video
-        video.video__player(preload="none" src="/video/rocknroll.mp4")
-            source(src="/video/rocknroll.mp4" type="video/mp4")
-            source(src="/video/rocknroll.mp4" type="video/ogg")
-            source(src="/video/rocknroll.mp4" type="video/webm")
-        button.video__play
-        .video__information
-            p.video__name Первичная настройка интеграции
-            p.video__time ~ 7 мин
+        .video__container
+            video.video__player(preload="none" src="/video/rocknroll.mp4")
+                source(src="/video/rocknroll.mp4" type="video/mp4")
+                source(src="/video/rocknroll.mp4" type="video/ogg")
+                source(src="/video/rocknroll.mp4" type="video/webm")
+            button.video__play
+            .video__information
+                p.video__name Первичная настройка интеграции
+                p.video__time ~ 7 мин
