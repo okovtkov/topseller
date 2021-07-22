@@ -5,8 +5,7 @@
 
 @media screen and (min-width: 1024px) {
     .positioner {
-        width: auto;
-        margin-left: 2.343%;
-        margin-right: 2.343%;
+        width: 75%;
+        margin: 0 auto;
     }
 }

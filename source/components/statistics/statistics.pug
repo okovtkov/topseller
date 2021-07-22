@@ -1,0 +1,16 @@
+include ../positioner/positioner
+
+mixin statistics
+    +positioner('article').statistics
+        .statistics__cell
+            span.statistics__number 100k
+            p.statistics__text Регистраций в системе за 2021 год
+        .statistics__cell
+            span.statistics__number 3.6k
+            p.statistics__text Количество новых товаров ежедневно
+        .statistics__cell
+            span.statistics__number 99%
+            p.statistics__text Довольных клиентов нашей платформы
+        .statistics__cell
+            span.statistics__number 456k
+            p.statistics__text Количество новых товаров ежедневно
