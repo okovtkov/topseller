@@ -8,3 +8,4 @@ import "../components/marketplaces/marketplaces.scss";
 import "../components/marketplaces-icons/marketplaces-icons.scss";
 import "../components/button/button.scss";
 import "../components/statistics/statistics.scss";
+import "../components/updates/updates.scss";
