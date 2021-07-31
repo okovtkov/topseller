@@ -7,7 +7,7 @@ $primary-color: #258AFF;
     position: relative;
     padding-top: 10%;
     padding-bottom: 20%;
-    overflow: hidden;
+    overflow: scroll;
 
     @media screen and (min-width: 1024px) {
         margin-top: -20px;
@@ -39,7 +39,7 @@ $primary-color: #258AFF;
 }
 
 .updates__buttons {
-    position: relative;
+    position:sticky;
     margin-top: 5px;
     width: 55px;
 
@@ -81,9 +81,17 @@ $primary-color: #258AFF;
 }
 
 .updates__line {
-    width: 1011px;
+    width: 768px;
     height: 1px;
     background-color: $primary-color;
+
+    @media screen and (min-width: 900px) {
+        width: 100%;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 1011px;
+    }
 }
 
 .updates__cells {
