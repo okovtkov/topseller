@@ -1,0 +1,12 @@
+include ../positioner/positioner
+include ../button/button
+
+mixin consultation
+    +positioner('section').consultation
+        .consultation__icons
+            .consultation__question ?
+            .consultation__answer !
+        .consultation__content
+            h2.consultation__title Нужна консультация?
+            p.consultation__text Наши специалисты ответят на любой интересующий вопрос
+            +button('Задать вопрос', 'a').consultation__button(href='#')

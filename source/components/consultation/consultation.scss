@@ -1,0 +1,148 @@
+.consultation {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 5% 0;
+    }
+}
+
+.consultation__icons {
+    width: 300px;
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 14.94%;
+    margin-bottom: 136px;
+
+    @media screen and (min-width: 768px) {
+        margin-top: auto;
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: 350px;
+        margin-top: 0;
+    }
+}
+
+.consultation__icons::before,
+.consultation__icons::after {
+    position: absolute;
+    top: 150px;
+    left: 30px;
+    width: 67px;
+    height: 56px;
+    background-image: url('./bg.png');
+    background-repeat: no-repeat;
+    background-size: 130px;
+    background-position: 1px;
+    content: '';
+
+    @media screen and (min-width: 1024px) {
+        top: 180px;
+        left: 0px;
+        width: 67px * 2 - 6;
+        height: 56px * 2;
+    }
+}
+
+.consultation__icons::after {
+    top: 33px;
+    left: 185px;
+    width: 40px;
+    height: 40px;
+    background-size: 130px;
+    background-position: 0px 1px;
+
+    @media screen and (min-width: 1024px) {
+        top: 45px;
+        left: 250px;
+        width: 40px * 1.8;
+        height: 40px * 1.5;
+        background-size: 120px;
+    }
+}
+
+.consultation__question,
+.consultation__answer {
+    display: inline-block;
+    font-size: 50px;
+    background-color: #fff;
+    color: #7C8087;
+    font-weight: bold;
+    padding: 25px 40px;
+    box-shadow: 0px 32px 84px rgba(14, 86, 124, 0.165308);
+    border-radius: 0px 8px 8px 8px;
+
+    @media screen and (min-width: 1024px) {
+        font-size: 72px;
+        padding: 48px 60px;
+        line-height: 60px;
+    }
+}
+
+.consultation__answer {
+    position: relative;
+    top: 90px;
+    left: -21px;
+    padding: 25px 47px;
+    z-index: 1;
+    border-radius: 8px 8px 0px 8px;
+
+    @media screen and (min-width: 1024px) {
+        top: 130px;
+        padding: 48px 75px;
+        line-height: 60px;
+        font-size: 72px;
+    }
+}
+
+.consultation__content {
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+        text-align: left;
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: 445px;
+    }
+}
+
+.consultation__title {
+    margin-bottom: 32px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 42px;
+        margin-top: 0;
+    }
+
+    @media screen and (min-width: 1024px) {
+        font-size: 58px;
+    }
+}
+
+.consultation__text {
+    margin-bottom: 48px;
+
+    @media screen and (min-width: 850px) {
+        width: 390px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        font-size: 18px;
+    }
+}
+
+.consultation__button {
+    margin-bottom: 14.93333%;
+    box-shadow: 0px 32px 84px rgba(0, 0, 0, 0.21725);
+
+    @media screen and (min-width: 768px) {
+        margin: 0;
+        width: 251px;
+    }
+}
