@@ -1,8 +1,8 @@
 include ../positioner/positioner
 include ../button/button
 
-mixin consultation
-    +positioner('section').consultation
+mixin consultation(reverse)
+    +positioner('section').consultation(class=reverse)
         .consultation__icons
             .consultation__question ?
             .consultation__answer !
