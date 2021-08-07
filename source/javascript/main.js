@@ -10,3 +10,5 @@ import "../components/button/button.scss";
 import "../components/statistics/statistics.scss";
 import "../components/updates/updates.scss";
 import "../components/consultation/consultation.scss";
+import "../components/possibilities/possibilities.scss";
+import "../components/possibilities/possibilities.js";
