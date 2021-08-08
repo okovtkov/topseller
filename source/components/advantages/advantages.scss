@@ -1,0 +1,113 @@
+.advantages {
+    padding: 56px 0;
+    overflow: hidden;
+}
+
+.advantages__title {
+    margin-top: 0;
+    margin-bottom: 32px;
+    font-size: 20px;
+    font-weight: 600;
+
+    @media screen and (min-width: 425px) {
+        font-size: 28px;
+    }
+
+    @media screen and (min-width: 768px) {
+        font-size: 32px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        font-size: 58px;
+    }
+}
+
+.advantages__title_3 {
+    margin-top: 16px;
+    margin-bottom: 8px;
+    font-size: 21px;
+}
+
+.advantages__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: calc(100vw - 4%);
+    overflow-x: scroll;
+    margin-bottom: 80px;
+
+    &:last-child {
+        justify-content: flex-start;
+        margin-bottom: 0;
+
+        .advantages__container {
+            @media screen and (min-width: 1320px) {
+                margin-left: 35px;
+            }
+        }
+    }
+
+    @media screen and (min-width: 800px) {
+        width: 100%;
+        overflow-x: visible;
+    }
+}
+
+.advantages__title_large {
+    position: relative;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: bold;
+
+    &::after {
+        @media screen and (min-width: 1024px) {
+            position: absolute;
+            top: 15px;
+            right: 32px;
+            width: 45px;
+            height: 20px;
+            background-image: url('./arrow.png');
+            background-repeat: no-repeat;
+            content: '';
+        }
+    }
+}
+
+.advantages__title_mob {
+    display: block;
+
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
+}
+
+.advantages__title_desk {
+    display: none;
+    @media screen and (min-width: 1024px) {
+        display: block;
+        align-self: center;
+        padding-right: 109px;
+    }
+}
+
+.advantages__container {
+    min-width: 240px;
+    margin-right: 16px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.advantages__icon {
+    display: inline-block;
+    padding: 23px;
+    border: 1px solid #E2E4E8;
+    border-radius: 10px;
+}
+
+.advantages__text {
+    max-width: 240px;
+    margin: 0;
+}

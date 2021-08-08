@@ -12,3 +12,4 @@ import "../components/updates/updates.scss";
 import "../components/consultation/consultation.scss";
 import "../components/possibilities/possibilities.scss";
 import "../components/possibilities/possibilities.js";
+import "../components/advantages/advantages.scss";
