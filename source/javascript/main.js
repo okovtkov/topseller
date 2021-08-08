@@ -13,3 +13,5 @@ import "../components/consultation/consultation.scss";
 import "../components/possibilities/possibilities.scss";
 import "../components/possibilities/possibilities.js";
 import "../components/advantages/advantages.scss";
+import "../components/acceleration/acceleration.scss";
+import "../components/acceleration/acceleration.js";
