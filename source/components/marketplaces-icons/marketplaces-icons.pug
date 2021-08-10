@@ -1,8 +1,8 @@
-mixin marketplaces-icons
-    .marketplaces__icons
-        a.marketplaces__icon.marketplaces__wildberries(href="#")
-            img(src="/img/wildberries.png", alt="wildberries")
-        a.marketplaces__icon.marketplaces__yandex(href="#")
-            img(src="/img/yandex.png", alt="yandex")
-        a.marketplaces__icon.marketplaces__ozon(href="#")
-            img(src="/img/ozon.png", alt="ozon")
+mixin marketplaces-icons(large = '')
+    .marketplaces-icons&attributes(attributes)
+        a.marketplaces-icon.marketplaces-icon_wildberries(href="#")
+            img(src=`/img/wildberries${large}.png`, alt="wildberries")
+        a.marketplaces-icon.marketplaces-icon_yandex(href="#")
+            img(src=`/img/yandex${large}.png`, alt="yandex")
+        a.marketplaces-icon.marketplaces-icon_ozon(href="#")
+            img(src=`/img/ozon${large}.png`, alt="ozon")
