@@ -16,3 +16,5 @@ import "../components/advantages/advantages.scss";
 import "../components/acceleration/acceleration.scss";
 import "../components/acceleration/acceleration.js";
 import "../components/dropshipping/dropshipping.scss";
+import "../components/analytics/analytics.scss";
+import "../components/analytics/analytics.js";
