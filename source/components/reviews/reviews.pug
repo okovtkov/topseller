@@ -1,0 +1,39 @@
+include ../positioner/positioner
+include ../svg-icon/svg-icon
+
+mixin reviews
+    section.reviews
+        +positioner
+            .reviews__wrapper
+                .reviews__like
+                    +svg-icon('like')
+                header.reviews__header
+                    h2.reviews__title Отзывы
+                    .reviews__buttons
+                        .reviews__button.reviews__button_prev
+                            +svg-icon('arrow')
+                        .reviews__button.reviews__button_next
+                            +svg-icon('arrow')
+                ul.reviews__list
+                    li.reviews__item
+                        .reviews__container
+                            img(src="/img/ava-1.png", alt="аватарка").reviews__image
+                            p.reviews__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus ridiculus id a fringilla fames enim.
+                    li.reviews__item
+                        .reviews__container
+                            img(src="/img/ava-2.png", alt="аватарка").reviews__image
+                            p.reviews__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus ridiculus id a fringilla fames enim.
+                    li.reviews__item
+                        .reviews__container
+                            img(src="/img/ava-3.png", alt="аватарка").reviews__image
+                            p.reviews__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus ridiculus id a fringilla fames enim.
+                    li.reviews__item
+                        .reviews__container
+                            img(src="/img/ava-4.png", alt="аватарка").reviews__image
+                            p.reviews__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus ridiculus id a fringilla fames enim.
+                .reviews__pages
+                    .reviews__slider
+                    .reviews__page.reviews__page_current
+                    .reviews__page
+                    .reviews__page
+                    .reviews__page

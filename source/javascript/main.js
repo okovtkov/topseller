@@ -18,3 +18,5 @@ import "../components/acceleration/acceleration.js";
 import "../components/dropshipping/dropshipping.scss";
 import "../components/analytics/analytics.scss";
 import "../components/analytics/analytics.js";
+import "../components/reviews/reviews.scss";
+import "../components/reviews/reviews.js";
