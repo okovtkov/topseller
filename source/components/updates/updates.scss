@@ -6,15 +6,10 @@ $primary-color: #258AFF;
     background-color: $bgc;
     position: relative;
     padding-top: 10%;
-    padding-bottom: 20%;
-    overflow: scroll;
+    padding-bottom: 10%;
 
-    @media screen and (min-width: 820px) {
-        overflow: visible;
-    }
-
-    @media screen and (min-width: 1024px) {
-        margin-top: -20px;
+    @media screen and (min-width: 1200px) {
+        padding-bottom: 20%;
     }
 }
 
@@ -25,7 +20,7 @@ $primary-color: #258AFF;
 .updates__header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 54px;
+    margin-bottom: 30px;
 }
 
 .updates__title {
@@ -39,6 +34,25 @@ $primary-color: #258AFF;
 
     @media screen and (min-width: 1200px) {
         font-size: 58px;
+    }
+}
+
+.updates__cells-wrapper {
+    width: 100vw;
+    margin-left: -6.6%;
+    margin-bottom: 0;
+    padding-left: 6.6%;
+    padding-top: 30px;
+    overflow-x: scroll;
+
+    @media screen and (min-width: 820px) {
+        overflow: visible;
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 }
 

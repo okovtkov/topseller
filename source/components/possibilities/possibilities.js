@@ -23,5 +23,25 @@ class Possibiity {
     }
 }
 
+class Scroll {
+    constructor(list) {
+        this.list = list;
+        this.pages = document.querySelector('.possibilities__pages');
+        this.list.addEventListener('scroll', () => this.move());
+    }
+
+    move() {
+        let scroll = this.list.scrollLeft;
+        let width = window.screen.width;
+        let widthOfList = this.list.scrollWidth - width;
+        let percent = scroll / widthOfList * 70;
+        let slider = document.querySelector('.possibilities__slider');
+        slider.style.left = percent + '%';
+    }
+}
+
 let elements = Array.from(document.querySelectorAll('.possibilities__item'));
 elements.forEach(element => new Possibiity(element));
+
+let list = document.querySelector('.possibilities__list');
+new Scroll(list);

@@ -26,7 +26,6 @@ class Analytics {
     }
 
     changeHeight() {
-        console.log('rabotaet')
         let open = document.querySelector('.analytics__item_open');
         let list = document.querySelector('.analytics__list');
         if (open)
@@ -57,8 +56,28 @@ class Arrow {
     }
 }
 
+class Scroll {
+    constructor(list) {
+        this.list = list;
+        this.pages = document.querySelector('.analytics__pages');
+        this.list.addEventListener('scroll', () => this.move());
+    }
+
+    move() {
+        let scroll = this.list.scrollLeft;
+        let width = window.screen.width;
+        let widthOfList = this.list.scrollWidth - width;
+        let percent = scroll / widthOfList * 70;
+        let slider = document.querySelector('.analytics__slider');
+        slider.style.left = percent + '%';
+    }
+}
+
 let distance = 0;
 let arrows = Array.from(document.querySelectorAll('.analytics__button-arrow'));
 let items = Array.from(document.querySelectorAll('.analytics__item'));
 items.forEach(item => new Analytics(item));
 arrows.forEach(arrow => new Arrow(arrow));
+
+let list = document.querySelector('.analytics__list');
+new Scroll(list);

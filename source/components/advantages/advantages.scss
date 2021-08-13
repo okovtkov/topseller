@@ -32,7 +32,9 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    width: calc(100vw - 4%);
+    width: 100vw;
+    margin-left: -6.6%;
+    padding-left: 6.6%;
     overflow-x: scroll;
     margin-bottom: 80px;
 
@@ -42,7 +44,7 @@
 
         .advantages__container {
             @media screen and (min-width: 1320px) {
-                margin-left: 35px;
+                margin-left: 12px;
             }
         }
     }

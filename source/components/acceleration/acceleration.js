@@ -23,5 +23,25 @@ class Acceleration {
     }
 }
 
+class Scroll {
+    constructor(list) {
+        this.list = list;
+        this.pages = document.querySelector('.acceleration__pages');
+        this.list.addEventListener('scroll', () => this.move());
+    }
+
+    move() {
+        let scroll = this.list.scrollLeft;
+        let width = window.screen.width;
+        let widthOfList = this.list.scrollWidth - width;
+        let percent = scroll / widthOfList * 70;
+        let slider = document.querySelector('.acceleration__slider');
+        slider.style.left = percent + '%';
+    }
+}
+
 let elements = Array.from(document.querySelectorAll('.acceleration__item'));
 elements.forEach(element => new Acceleration(element));
+
+let list = document.querySelector('.acceleration__list');
+new Scroll(list);

@@ -82,15 +82,12 @@ $text: #1D293F;
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-start;
-    width: 100% + 60;
+    width: 100vw;
+    margin-left: -6.6%;
+    padding-left: 6.6%;
     margin-bottom: 0;
-    margin-left: -60px;
-    padding-left: 60px;
-    padding-top: 32px;
-    padding-bottom: 56px;
-    list-style: none;
     overflow-x: scroll;
-    color: $text;
+    list-style-type: none;
 
     @media screen and (min-width: 1024px) {
         flex-direction: column;
@@ -105,6 +102,7 @@ $text: #1D293F;
     padding: 16px;
     background-color: #fff;
     margin-right: 16px;
+    margin-bottom: 56px;
     border-radius: 5px;
 
     &:nth-child(3) {
@@ -152,4 +150,26 @@ $text: #1D293F;
 
 .possibilities__text_open {
     display: block;
+}
+
+.possibilities__pages {
+    position: relative;
+    bottom: 35px;
+    left: 0;
+    display: flex;
+    width: 100px;
+    height: 3px;
+    background-color: #E2E4E8;
+
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
+}
+
+.possibilities__slider {
+    position: absolute;
+    width: 29px;
+    height: 3px;
+    background-color: #0F53FA;
+    z-index: 1;
 }
