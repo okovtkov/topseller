@@ -1,0 +1,56 @@
+include ../positioner/positioner
+
+mixin unloading
+    section.unloading
+        +positioner
+            .unloading__wrapper
+                .unloading__content
+                    h2.unloading__wrapper Выгрузка остатков
+                    p.unloading__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate nec sed nunc tortor molestie tortor, nunc nec viverra. Tellus consectetur sapien ut velit orci enim.
+                .unloading__container
+                    header.unloading__header
+                        .unloading__warehouse Мой склад + Topseller
+                        .unloading__balance Остаток
+                    .unloading__scheme
+                        ul.unloading__products
+                            li.unloading__product
+                                .unloading__image-container
+                                    img(src="/img/bruki.jpg", alt="Брюки мужские").unloading__image
+                                .unloading__information
+                                    h3.unloading__name Брюки мужские
+                                    span.unloading__amount 10 шт
+                                .unloading__arrows
+                                    .unloading__arrow_blue
+                                    .unloading__arrow_pink
+                            li.unloading__product
+                                .unloading__image-container
+                                    img(src="/img/constructor.jpg", alt="Детский конструктор").unloading__image
+                                .unloading__information
+                                    h3.unloading__name Детский конструктор
+                                    span.unloading__amount 24 шт
+                                .unloading__arrows
+                                    .unloading__arrow_blue
+                                    .unloading__arrow_pink
+                            li.unloading__product.unloading__product_pc
+                                .unloading__image-container
+                                    img(src="/img/platie.jpg", alt="Платье женское").unloading__image
+                                .unloading__information
+                                    h3.unloading__name Платье женское
+                                    span.unloading__amount 11 шт
+                                .unloading__arrows
+                                    .unloading__arrow_blue
+                                    .unloading__arrow_pink
+                            li.unloading__product.unloading__product_pc
+                                .unloading__image-container
+                                    img(src="/img/cofe.jpg", alt="Кофеварка").unloading__image
+                                .unloading__information
+                                    h3.unloading__name Кофеварка
+                                    span.unloading__amount 9 шт
+                                .unloading__arrows
+                                    .unloading__arrow_blue
+                                    .unloading__arrow_pink
+                        .unloading__arrow-name
+                            span.unloading__order Заказ
+                            span.unloading__reserve Остаток-резерв
+                        .unloading__marketplaces
+                            +marketplaces-icons('_large').unloading__marketplaces-icons
