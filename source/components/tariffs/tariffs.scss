@@ -1,0 +1,236 @@
+$text: #7C8087;
+$primary-text: #1D293F;
+$primary: #0F53FA;
+
+.tariffs {
+    padding: 56px 0;
+
+    @media screen and (min-width: 1024px) {
+        font-size: 18px;
+    }
+}
+
+.tariffs__title {
+    margin: 0;
+
+    @media screen and (min-width: 768px) {
+        font-size: 36px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        font-size: 48px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 58px;
+    }
+}
+
+.tariffs__about {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 1024px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.tariffs__text {
+    color: $text;
+    font-size: 16px;
+
+    @media screen and (min-width: 1024px) {
+        font-size: 18px;
+        width: 60%;
+    }
+}
+
+.tariffs__container {
+    display: flex;
+    width: 100%;
+
+    @media screen and (min-width: 1024px) {
+        width: auto;
+    }
+}
+
+.tariffs__link {
+    padding: 18px 0;
+    text-align: center;
+    text-decoration: none;
+    color: $primary-text;
+    border: 1px solid #E9F7FE;
+    width: 100%;
+    border-radius: 10px 0 0 10px;
+    font-weight: 600;
+
+    &:hover {
+        background-color: #e9f7fe7a;
+    }
+
+    &:last-child {
+        border-radius: 0 10px 10px 0;
+    }
+
+    &_active {
+        background-color: #E9F7FE;
+
+        &:hover {
+            background-color: #E9F7FE;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: 175px;
+    }
+}
+
+.tariffs__list {
+    display: none;
+    width: 100vw;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 24px;
+    overflow-x: scroll;
+    margin-left: -6.6%;
+    padding-left: 6.6%;
+
+    &_active {
+        display: flex;
+
+        @media screen and (min-width: 600px) {
+            justify-content: space-around;
+        }
+
+        @media screen and (min-width: 1024px) {
+            flex-direction: column;
+            width: 100%;
+            padding-left: 0;
+            margin-left: 0;
+            overflow: visible;
+        }
+    }
+}
+
+.tariffs__item {
+    display: flex;
+    flex-direction: column;
+    margin-right: 24px;
+    min-width: 217px;
+
+    @media screen and (min-width: 1024px) {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 31.5px 0;
+        margin: 0;
+        border-top: 1px solid #ECEFF4;
+        border-bottom: 1px solid #ECEFF4;
+    }
+}
+
+.tariffs__name {
+    font-size: 48px;
+    margin: 0;
+}
+
+.tariffs__list-advantages {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.tariffs__item-advantages {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.tariffs__price {
+    margin-bottom: 16px;
+    font-size: 32px;
+    font-weight: 600;
+
+    @media screen and (min-width: 1024px) {
+        font-size: 48px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 58px;
+    }
+}
+
+.tariffs__button {
+    width: 217px;
+    height: 55px;
+    border: 2px solid $primary;
+    color: $primary;
+    background-color: #fff;
+    padding: 10px 0;
+    line-height: 30px;
+
+    &:hover {
+        background-color: #1054ff1c;
+    }
+}
+
+.tariffs__links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
+
+    @media screen and (min-width: 1024px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.tariffs__link-all,
+.tariffs__link-diff {
+    width: 170px;
+    color: $primary;
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 1px dotted $primary;
+
+    &:hover {
+        border-bottom: 1px solid $primary;
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: 195px;
+    }
+}
+
+.tariffs__differences {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+    text-decoration: none;
+
+    @media screen and (min-width: 1024px) {
+        margin-top: 3px;
+    }
+}
+
+.tariffs__link-diff {
+    width: auto;
+    color: #FF2B99;
+    vertical-align: top;
+    margin-right: 16px;
+    border-bottom: 1px dotted #FF2B99;
+
+    &:hover {
+        border-bottom: 1px solid #FF2B99;
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: 220px;
+    }
+}
+
+.tariffs__differences svg {
+    margin-top: -3px;
+}

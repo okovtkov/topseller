@@ -1,0 +1,53 @@
+include ../positioner/positioner
+include ../svg-icon/svg-icon
+include ../button/button
+
+mixin tariffs
+    section.tariffs
+        +positioner
+            .tariffs__wrapper
+                h2.tariffs__title Тарифы
+                .tariffs__about
+                    p.tariffs__text Приложение Topse11er работает по подписке. Вы можете оценить все возможности приложения в течение бесплатного тестового периода (3 дня)
+                    .tariffs__container
+                        a(href="#six-month").tariffs__link.tariffs__link_active 6 месяцев
+                        a(href="#one-month").tariffs__link 1 месяц
+                ul.tariffs__list.tariffs__list_active#six-month
+                    li.tariffs__item
+                        h3.tariffs__name Lite
+                        ul.tariffs__list-advantages
+                            li.tariffs__item-advantages Интеграция по артикулам
+                            li.tariffs__item-advantages Поддержка модели FBO
+                            li.tariffs__item-advantages Поддержка модели FBS
+                        span.tariffs__price 3 990 ₽
+                        +button('Выбрать', 'a href="#"').tariffs__button
+                    li.tariffs__item
+                        h3.tariffs__name Pro
+                        ul.tariffs__list-advantages
+                            li.tariffs__item-advantages Интеграция по артикулам
+                            li.tariffs__item-advantages Поддержка модели FBO
+                            li.tariffs__item-advantages Поддержка модели FBS
+                        span.tariffs__price 9 990 ₽
+                        +button('Выбрать', 'a href="#"').tariffs__button
+                ul.tariffs__list#one-month
+                    li.tariffs__item
+                        h3.tariffs__name Lite
+                        ul.tariffs__list-advantages
+                            li.tariffs__item-advantages Интеграция по артикулам
+                            li.tariffs__item-advantages Поддержка модели FBO
+                            li.tariffs__item-advantages Поддержка модели FBS
+                        span.tariffs__price 799 ₽
+                        +button('Выбрать', 'a href="#"').tariffs__button
+                    li.tariffs__item
+                        h3.tariffs__name Pro
+                        ul.tariffs__list-advantages
+                            li.tariffs__item-advantages Интеграция по артикулам
+                            li.tariffs__item-advantages Поддержка модели FBO
+                            li.tariffs__item-advantages Поддержка модели FBS
+                        span.tariffs__price 1 999 ₽
+                        +button('Выбрать', 'a href="#"').tariffs__button
+                .tariffs__links
+                    a(href="#").tariffs__link-all Смотреть все функции
+                    a(href="#").tariffs__differences
+                        p.tariffs__link-diff Чем отличается lite от pro
+                        +svg-icon('play')

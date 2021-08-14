@@ -23,3 +23,5 @@ import "../components/reviews/reviews.js";
 import "../components/unloading/unloading.scss";
 import "../components/partners/partners.scss";
 import "../components/partners/partners.js";
+import "../components/tariffs/tariffs.scss";
+import "../components/tariffs/tariffs.js";
