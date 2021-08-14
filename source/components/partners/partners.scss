@@ -1,23 +1,24 @@
 $bgc: #E9F7FE;
+$primary: #0F53FA;
 
-.reviews {
+.partners {
     background-color: $bgc;
     padding: 56px 0;
     overflow-x: hidden;
 }
 
-.reviews__wrapper {
+.partners__wrapper {
     position: relative;
     display: flex;
     flex-direction: column;
 }
 
-.reviews__header {
+.partners__header {
     display: flex;
     justify-content: space-between;
 }
 
-.reviews__title {
+.partners__title {
     @media screen and (min-width: 768px) {
         font-size: 36px;
     }
@@ -31,7 +32,7 @@ $bgc: #E9F7FE;
     }
 }
 
-.reviews__buttons {
+.partners__buttons {
     display: none;
     @media screen and (min-width: 1024px) {
         display: flex;
@@ -39,7 +40,7 @@ $bgc: #E9F7FE;
     }
 }
 
-.reviews__button {
+.partners__button {
     cursor: pointer;
 
     &:last-child {
@@ -49,10 +50,12 @@ $bgc: #E9F7FE;
     }
 }
 
-.reviews__list {
+.partners__list {
     display: flex;
     flex-wrap: nowrap;
     width: 100vw;
+    padding-top: 70px;
+    margin-top: 0;
     margin-left: -6.6%;
     padding-left: 6.6%;
     overflow-x: scroll;
@@ -63,17 +66,38 @@ $bgc: #E9F7FE;
     }
 }
 
-.reviews__item {
+.partners__item {
+    position: relative;
     list-style-type: none;
-    width: 160%;
+    width: 170%;
     min-width: 258px;
     padding: 27px;
     margin-right: 16px;
     background-color: #fff;
     border-radius: 10px;
+
+    @media screen and (min-width: 1024px) {
+        min-width: 396px;
+    }
 }
 
-.reviews__pages {
+.partners__image {
+    position: absolute;
+    top: -62px;
+    left: 23px;
+}
+
+.partners__link {
+    color: $primary;
+    text-decoration: none;
+    font-weight: 600;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.partners__pages {
     position: relative;
     bottom: -15px;
     left: 0;
@@ -88,11 +112,11 @@ $bgc: #E9F7FE;
     }
 }
 
-.reviews__slider {
+.partners__slider {
     position: absolute;
     width: 29px;
     height: 3px;
-    background-color: #0F53FA;
+    background-color: $primary;
     z-index: 1;
 
     @media screen and (min-width: 1024px) {
@@ -100,7 +124,7 @@ $bgc: #E9F7FE;
     }
 }
 
-.reviews__page {
+.partners__page {
     display: none;
     width: 29px;
     height: 3px;
@@ -114,6 +138,6 @@ $bgc: #E9F7FE;
     }
 }
 
-.reviews__page_current {
-    background-color: #0F53FA;
+.partners__page_current {
+    background-color: $primary;
 }

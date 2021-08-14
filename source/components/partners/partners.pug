@@ -1,0 +1,47 @@
+include ../positioner/positioner
+include ../svg-icon/svg-icon
+
+mixin partners
+    section.partners
+        +positioner
+            .partners__wrapper
+                .partners__like
+                    +svg-icon('partners')
+                header.partners__header
+                    h2.partners__title Партнеры
+                    .partners__buttons
+                        .partners__button.partners__button_prev
+                            +svg-icon('arrow')
+                        .partners__button.partners__button_next
+                            +svg-icon('arrow')
+                ul.partners__list
+                    li.partners__item
+                        .partners__container
+                            img(src="/img/partner.png", alt="партнер").partners__image
+                            h3.partners__title-3 Успех компании Adidas
+                            p.partners__text Как мы увеличили продажи и улучшили автоматизацию бизнеса вместе с Топселлер
+                            a(href="#").partners__link Прочитать →
+                    li.partners__item
+                        .partners__container
+                            img(src="/img/partner.png", alt="партнер").partners__image
+                            h3.partners__title-3 Успех компании Adidas
+                            p.partners__text Как мы увеличили продажи и улучшили автоматизацию бизнеса вместе с Топселлер
+                            a(href="#").partners__link Прочитать →
+                    li.partners__item
+                        .partners__container
+                            img(src="/img/partner.png", alt="партнер").partners__image
+                            h3.partners__title-3 Успех компании Adidas
+                            p.partners__text Как мы увеличили продажи и улучшили автоматизацию бизнеса вместе с Топселлер
+                            a(href="#").partners__link Прочитать →
+                    li.partners__item
+                        .partners__container
+                            img(src="/img/partner.png", alt="партнер").partners__image
+                            h3.partners__title-3 Успех компании Adidas
+                            p.partners__text Как мы увеличили продажи и улучшили автоматизацию бизнеса вместе с Топселлер
+                            a(href="#").partners__link Прочитать →
+                .partners__pages
+                    .partners__slider
+                    .partners__page.partners__page_current
+                    .partners__page
+                    .partners__page
+                    .partners__page

@@ -21,3 +21,5 @@ import "../components/analytics/analytics.js";
 import "../components/reviews/reviews.scss";
 import "../components/reviews/reviews.js";
 import "../components/unloading/unloading.scss";
+import "../components/partners/partners.scss";
+import "../components/partners/partners.js";
