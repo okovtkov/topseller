@@ -1,0 +1,23 @@
+include ../positioner/positioner
+include ../title/title
+include ../svg-icon/svg-icon
+include ../button/button
+
+mixin settings
+    section.settings
+        +positioner
+            .settings__wrapper
+                +title('Настройка "под ключ"').settings__title
+                ul.settings__list
+                    li.settings__item
+                        .settings__variants
+                            h3.settings__name Вариант 1
+                            p.settings__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate nec sed nunc tortor molestie tortor, nunc nec viverra. Tellus consectetur sapien ut velit orci enim.
+                        span.settings__price 3 990 ₽
+                        +button('Выбрать', 'a href="#"').settings__button
+                    li.settings__item
+                        .settings__variants
+                            h3.settings__name Вариант 1
+                            .settings__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate nec sed nunc tortor molestie tortor, nunc nec viverra. Tellus consectetur sapien ut velit orci enim.
+                        span.settings__price 3 990 ₽
+                        +button('Выбрать', 'a href="#"').settings__button

@@ -4,6 +4,7 @@ $primary: #0F53FA;
 
 .tariffs {
     padding: 56px 0;
+    overflow-x: hidden;
 
     @media screen and (min-width: 1024px) {
         font-size: 18px;

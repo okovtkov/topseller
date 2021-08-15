@@ -26,3 +26,4 @@ import "../components/partners/partners.js";
 import "../components/tariffs/tariffs.scss";
 import "../components/tariffs/tariffs.js";
 import "../components/title/title.scss";
+import "../components/settings/settings.scss";
