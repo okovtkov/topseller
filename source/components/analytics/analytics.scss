@@ -26,16 +26,8 @@ $text: #1D293F;
 }
 
 .analytics__title {
-    margin-top: 0;
-    margin-bottom: 32px;
-
     @media screen and (min-width: 1024px) {
         width: 30%;
-        font-size: 42px;
-    }
-
-    @media screen and (min-width: 1200px) {
-        font-size: 58px;
     }
 }
 

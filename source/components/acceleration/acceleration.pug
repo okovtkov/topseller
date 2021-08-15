@@ -1,15 +1,16 @@
 include ../positioner/positioner
+include ../title/title
 
 mixin acceleration
     section.acceleration
         +positioner
-            h2.acceleration__title.acceleration__title_mob Ускорение операционных процессов 
+            +title('Ускорение операционных процессов').acceleration__title_mob
             .acceleration__wrapper
                 .acceleration__container
                     img(src="/img/acceleration_desk.jpg", alt="ускорение операционных процессов").acceleration__image.acceleration__image_pc
                     img(src="/img/acceleration_mob.jpg", alt="ускорение операционных процессов").acceleration__image.acceleration__image_mob
                 ul.acceleration__list
-                    h2.acceleration__title.acceleration__title_desk Ускорение операционных процессов 
+                    +title('Ускорение операционных процессов').acceleration__title_desk
                     li.acceleration__item
                         button.acceleration__button Сборка заказов
                         p.acceleration__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate nec sed nunc tortor molestie tortor, nunc nec viverra. Tellus consectetur sapien ut velit orci enim.

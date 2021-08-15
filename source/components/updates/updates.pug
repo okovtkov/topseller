@@ -1,11 +1,12 @@
 include ../svg-icon/svg-icon
 include ../positioner/positioner
+include ../title/title
 
 mixin updates
     section.updates
         +positioner.updates__container
             header.updates__header
-                h2.updates__title Новости и обновления
+                +title('Новости и обновления').updates__title
                 a.updates__link(href="#") Смотреть все новости
             .updates__cells-wrapper
                 .updates__line

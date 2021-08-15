@@ -1,4 +1,5 @@
 include ../positioner/positioner
+include ../title/title
 include ../svg-icon/svg-icon
 
 mixin partners
@@ -8,7 +9,7 @@ mixin partners
                 .partners__like
                     +svg-icon('partners')
                 header.partners__header
-                    h2.partners__title Партнеры
+                    +title('Партнеры').partners__title
                     .partners__buttons
                         .partners__button.partners__button_prev
                             +svg-icon('arrow')

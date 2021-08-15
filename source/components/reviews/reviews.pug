@@ -1,4 +1,5 @@
 include ../positioner/positioner
+include ../title/title
 include ../svg-icon/svg-icon
 
 mixin reviews
@@ -8,7 +9,7 @@ mixin reviews
                 .reviews__like
                     +svg-icon('like')
                 header.reviews__header
-                    h2.reviews__title Отзывы
+                    +title('Отзывы').reviews__title
                     .reviews__buttons
                         .reviews__button.reviews__button_prev
                             +svg-icon('arrow')

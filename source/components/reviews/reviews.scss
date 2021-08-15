@@ -17,20 +17,6 @@ $bgc: #E9F7FE;
     justify-content: space-between;
 }
 
-.reviews__title {
-    @media screen and (min-width: 768px) {
-        font-size: 36px;
-    }
-
-    @media screen and (min-width: 1024px) {
-        font-size: 46px;
-    }
-
-    @media screen and (min-width: 1200px) {
-        font-size: 58px;
-    }
-}
-
 .reviews__buttons {
     display: none;
     @media screen and (min-width: 1024px) {

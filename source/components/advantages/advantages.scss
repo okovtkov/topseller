@@ -3,25 +3,6 @@
     overflow: hidden;
 }
 
-.advantages__title {
-    margin-top: 0;
-    margin-bottom: 32px;
-    font-size: 20px;
-    font-weight: 600;
-
-    @media screen and (min-width: 425px) {
-        font-size: 28px;
-    }
-
-    @media screen and (min-width: 768px) {
-        font-size: 32px;
-    }
-
-    @media screen and (min-width: 1024px) {
-        font-size: 58px;
-    }
-}
-
 .advantages__title_3 {
     margin-top: 16px;
     margin-bottom: 8px;

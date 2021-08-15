@@ -15,19 +15,6 @@ $text: #7C8087;
     text-align: center;
 }
 
-.dropshipping__title {
-    @media screen and (min-width: 768px) {
-        font-size: 36px;
-    }
-
-    @media screen and (min-width: 1024px) {
-        margin: 0;
-        font-weight: 600;
-        font-size: 58px;
-        margin-bottom: 24px;
-    }
-}
-
 .dropshipping__text {
     font-size: 14px;
     color: $text;

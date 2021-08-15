@@ -1,10 +1,11 @@
 include ../positioner/positioner
+include ../title/title
 include ../svg-icon/svg-icon
 
 mixin analytics
     section.analytics
         +positioner
-            h2.analytics__title Аналитика и финансы
+            +title('Аналитика и финансы').analytics__title
             .analytics__wrapper
                 .analytics__container
                     img(src="/img/possibilities.jpg", alt="Аналитика и финансы").analytics__image.analytics__image_pc

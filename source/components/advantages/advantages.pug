@@ -1,11 +1,12 @@
 include ../positioner/positioner
+include ../title/title
 include ../svg-icon/svg-icon
 
 mixin advantages
     section.advantages
         +positioner
-            h2.advantages__title Преимущества
-            h2.advantages__title.advantages__title_large.advantages__title_mob fbo
+            +title('Преимущества').advantages__title
+            h2.advantages__title_large.advantages__title_mob fbo
             .advantages__wrapper
                 h2.advantages__title.advantages__title_large.advantages__title_desk fbo
                 .advantages__container

@@ -1,11 +1,12 @@
 include ../positioner/positioner
+include ../title/title
 include ../marketplaces-icons/marketplaces-icons
 
 mixin dropshipping
     section.dropshipping
         +positioner
             .dropshipping__wrapper
-                h2.dropshipping__title Дропшиппинг
+                +title('Дропшиппинг').dropshipping__title
                 p.dropshipping__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate nec sed nunc tortor molestie tortor, nunc nec viverra. Tellus consectetur sapien ut velit orci enim.
                 .dropshipping__container
                     .dropshipping__numbers

@@ -24,19 +24,6 @@ $text: #1D293F;
     }
 }
 
-.possibilities__title {
-    margin-top: 0;
-    margin-bottom: 32px;
-
-    @media screen and (min-width: 1024px) {
-        font-size: 42px;
-    }
-
-    @media screen and (min-width: 1200px) {
-        font-size: 58px;
-    }
-}
-
 .possibilities__container {
     border-radius: 8px;
     width: 100%;

@@ -23,20 +23,6 @@ $primary-color: #258AFF;
     margin-bottom: 30px;
 }
 
-.updates__title {
-    margin: 0;
-    font-size: 20px;
-
-    @media screen and (min-width: 1024px) {
-        font-size: 40px;
-        font-weight: 600;
-    }
-
-    @media screen and (min-width: 1200px) {
-        font-size: 58px;
-    }
-}
-
 .updates__cells-wrapper {
     width: 100vw;
     margin-left: -6.6%;

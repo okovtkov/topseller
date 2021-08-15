@@ -151,19 +151,6 @@
     }
 }
 
-.consultation__title {
-    margin-bottom: 32px;
-
-    @media screen and (min-width: 768px) {
-        font-size: 32px;
-        margin-top: 0;
-    }
-
-    @media screen and (min-width: 1024px) {
-        font-size: 58px;
-    }
-}
-
 .consultation__text {
     margin-bottom: 48px;
 

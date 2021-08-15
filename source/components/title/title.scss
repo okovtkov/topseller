@@ -1,0 +1,17 @@
+.title {
+    margin: 0;
+    margin-bottom: 16px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 36px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        font-size: 48px;
+        margin-bottom: 24px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 58px;
+    }
+}

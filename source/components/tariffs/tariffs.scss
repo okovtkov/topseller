@@ -10,22 +10,6 @@ $primary: #0F53FA;
     }
 }
 
-.tariffs__title {
-    margin: 0;
-
-    @media screen and (min-width: 768px) {
-        font-size: 36px;
-    }
-
-    @media screen and (min-width: 1024px) {
-        font-size: 48px;
-    }
-
-    @media screen and (min-width: 1200px) {
-        font-size: 58px;
-    }
-}
-
 .tariffs__about {
     display: flex;
     flex-direction: column;
