@@ -87,6 +87,7 @@ $bgc: #F5FAFD;
     flex-direction: column;
     margin-right: 24px;
     max-width: 217px;
+    z-index: 1;
 
     @media screen and (min-width: 1024px) {
         flex-direction: row;
