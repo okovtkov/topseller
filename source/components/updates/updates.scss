@@ -79,6 +79,10 @@ $primary-color: #258AFF;
     text-decoration: none;
     font-weight: bold;
 
+    &:hover {
+        text-decoration: underline;
+    }
+
     @media screen and (min-width: 1024px) {
         position: relative;
         margin: auto 0;
@@ -86,16 +90,12 @@ $primary-color: #258AFF;
 }
 
 .updates__line {
-    width: 768px;
+    width: 730px;
     height: 1px;
     background-color: $primary-color;
 
     @media screen and (min-width: 900px) {
         width: 100%;
-    }
-
-    @media screen and (min-width: 1200px) {
-        width: 1011px;
     }
 }
 

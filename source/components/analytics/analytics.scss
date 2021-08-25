@@ -161,12 +161,12 @@ $text: #1D293F;
 .analytics__buttons {
     position: absolute;
     bottom: 30px;
-    left: 170px;
     display: none;
     margin-top: 20px;
 
     @media screen and (min-width: 1024px) {
         display: block;
+        margin-left: 100px;
     }
 }
 

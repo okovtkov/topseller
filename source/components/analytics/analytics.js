@@ -4,7 +4,6 @@ class Analytics {
     constructor(element) {
         let button = element.querySelector('.analytics__button');
         let text = element.querySelector('.analytics__text');
-
         button.addEventListener('click', () => this.toggle(element, text));
     }
 

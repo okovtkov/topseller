@@ -89,6 +89,10 @@ $link: #258AFF;
     text-align: center;
     border-bottom: 1px dashed $link;
 
+    &:hover {
+        border-bottom: 1px solid $link;
+    }
+
     @media screen and (min-width: 540px) {
         display: inline-block;
         margin-left: 100px;
