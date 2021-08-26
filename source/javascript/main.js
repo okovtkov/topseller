@@ -29,3 +29,5 @@ import "../components/title/title.scss";
 import "../components/settings/settings.scss";
 import "../components/follow/follow.scss";
 import "../components/follow/follow.js";
+import "../components/confidence/confidence.scss";
+import "../components/confidence/confidence.js";

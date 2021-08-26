@@ -1,0 +1,127 @@
+$bgc: #E9F7FE;
+
+.confidence {
+    background-color: $bgc;
+    padding: 56px 0;
+    overflow-x: hidden;
+
+    @media screen and (min-width: 1240px) {
+        padding: 96px 0;
+    }
+}
+
+.confidence__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.confidence__like {
+    margin-bottom: 32px;
+}
+
+.confidence__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.confidence__buttons {
+    display: none;
+    @media screen and (min-width: 1024px) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.confidence__button {
+    cursor: pointer;
+
+    &:last-child {
+        margin-left: 42px;
+        transform: rotate(180deg);
+        margin-top: -8px;
+    }
+}
+
+.confidence__list {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100vw;
+    margin-left: -6.6%;
+    padding-left: 6.6%;
+    overflow-x: scroll;
+
+    @media screen and (min-width: 1024px) {
+        width: 100%;
+        margin-left: 0;
+        padding-left: 0;
+        overflow-x: hidden;
+    }
+}
+
+.confidence__item {
+    list-style-type: none;
+    min-width: 103px;
+    height: 103px;
+    margin-right: 16px;
+    transition: margin 0.5s ease;
+
+    @media screen and (min-width: 768px) {
+        margin-right: 32px;
+        min-width: 165px;
+        height: 165px;
+    }
+
+    @media screen and (min-width: 1349px) {
+        margin-right: 77.5px;
+    }
+}
+
+.confidence__image {
+    width: 100%;
+}
+
+.confidence__pages {
+    position: relative;
+    bottom: -15px;
+    left: 0;
+    display: flex;
+    width: 100px;
+    height: 3px;
+    background-color: #E2E4E8;
+
+    @media screen and (min-width: 1024px) {
+        background-color: transparent;
+        width: 188px;
+    }
+}
+
+.confidence__slider {
+    position: absolute;
+    width: 29px;
+    height: 3px;
+    background-color: #0F53FA;
+    z-index: 1;
+
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
+}
+
+.confidence__page {
+    display: none;
+    width: 29px;
+    height: 3px;
+    margin-right: 16px;
+    border-radius: 2px;
+    background-color: #E2E4E8;
+
+    @media screen and (min-width: 1024px) {
+        display: block;
+        transition: all 0.5s ease;
+    }
+}
+
+.confidence__page_current {
+    background-color: #0F53FA;
+}

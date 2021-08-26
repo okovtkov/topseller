@@ -1,0 +1,41 @@
+include ../positioner/positioner
+include ../title/title
+include ../svg-icon/svg-icon
+
+mixin confidence
+    section.confidence
+        +positioner
+            .confidence__wrapper
+                .confidence__like
+                    +svg-icon('like')
+                header.confidence__header
+                    +title('Нам доверяют').confidence__title
+                    .confidence__buttons
+                        .confidence__button.confidence__button_prev
+                            +svg-icon('arrow')
+                        .confidence__button.confidence__button_next
+                            +svg-icon('arrow')
+                ul.confidence__list
+                    li.confidence__item
+                        img(src="/img/confidence.png", alt="нечто непонятное").confidence__image
+                    li.confidence__item
+                        img(src="/img/confidence.png", alt="нечто непонятное").confidence__image
+                    li.confidence__item
+                        img(src="/img/confidence.png", alt="нечто непонятное").confidence__image
+                    li.confidence__item
+                        img(src="/img/confidence.png", alt="нечто непонятное").confidence__image
+                    li.confidence__item
+                        img(src="/img/confidence.png", alt="нечто непонятное").confidence__image
+                    li.confidence__item
+                        img(src="/img/confidence.png", alt="нечто непонятное").confidence__image
+                    li.confidence__item
+                        img(src="/img/confidence.png", alt="нечто непонятное").confidence__image
+                    li.confidence__item
+                        img(src="/img/confidence.png", alt="нечто непонятное").confidence__image
+                .confidence__pages
+                    .confidence__slider
+                    .confidence__page.confidence__page_current
+                    .confidence__page
+                    .confidence__page
+                    .confidence__page
+                    .confidence__page
