@@ -25,5 +25,5 @@ class Video {
     }
 }
 
-let element = document.querySelector('.video');
-new Video(element);
+let elements = Array.from(document.querySelectorAll('.video'));
+elements.forEach(element => new Video(element));

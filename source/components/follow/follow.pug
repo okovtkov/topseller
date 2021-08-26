@@ -1,0 +1,45 @@
+include ../positioner/positioner
+include ../title/title
+include ../svg-icon/svg-icon
+
+mixin follow
+    section.follow
+        +positioner
+            .follow__title-container
+                +title('Следуйте за нами').follow__container-title
+                a(href="youtube.com").follow__link
+                    img(src="/img/yt_large.png", alt="иконка youtube").follow__image.follow__image_desk
+                    img(src="/img/yt_small.png", alt="иконка youtube").follow__image.follow__image_mob
+            .follow__wrapper
+                .follow__container
+                    .follow__video-container
+                        +video
+                        h3.follow__name Название видео
+                        .follow__views Просмотров 
+                            span 48 900
+                    .follow__video-container
+                        +video
+                        h3.follow__name Название видео
+                        .follow__views Просмотров 
+                            span 48 900
+                    .follow__video-container
+                        +video
+                        h3.follow__name Название видео
+                        .follow__views Просмотров 
+                            span 48 900
+                    .follow__video-container
+                        +video
+                        h3.follow__name Название видео
+                        .follow__views Просмотров 
+                            span 48 900
+                    .follow__video-container
+                        +video
+                        h3.follow__name Название видео
+                        .follow__views Просмотров 
+                            span 48 900
+                .follow__pages
+                    .follow__slider
+            button.follow__button.follow__button_left
+                +svg-icon('arrow')
+            button.follow__button.follow__button_right
+                +svg-icon('arrow')

@@ -27,3 +27,5 @@ import "../components/tariffs/tariffs.scss";
 import "../components/tariffs/tariffs.js";
 import "../components/title/title.scss";
 import "../components/settings/settings.scss";
+import "../components/follow/follow.scss";
+import "../components/follow/follow.js";
