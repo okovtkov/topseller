@@ -1,0 +1,33 @@
+include ../positioner/positioner
+include ../title/title
+include ../button/button
+include ../svg-icon/svg-icon
+
+mixin question-form
+    section.question-form
+        .question-form__form-wrapper
+            +positioner
+                button.question-form__close
+                    +svg-icon('close')
+                form(action="#" name="question").question-form__form
+                    .question-form__marketplaces
+                        input(type="radio" id="marketplace-ozon" name="radio-marketplaces").question-form__radio
+                        label(for="marketplace-ozon").question-form__label OZON
+                        input(type="radio" id="marketplace-wilberries" name="radio-marketplaces").question-form__radio
+                        label(for="marketplace-wilberries").question-form__label Wildberries
+                        input(type="radio" id="marketplace-yandex" name="radio-marketplaces").question-form__radio
+                        label(for="marketplace-yandex").question-form__label Yandex
+                    .question-form__inputs
+                        input(type="text" name="name" placeholder="Имя").question-form__input
+                        input(type="email" name="email" placeholder="Email").question-form__input
+                        input(type="tel" name="tel" placeholder="Телефон").question-form__input
+                    textarea(name="question", cols="30", rows="4" placeholder="Ваш вопрос").question-form__textarea
+                    .question-form__send
+                        input(type="radio" name="politics" id="politics").question-form__radio
+                        label(for="politics").question-form__label.question-form__politics Ознакомлен с <span> Политикой конфиденциальности </span>
+                        input(type="submit" value="Отправить").button.question-form__button.question-form__button-send
+        .question-form__complete-wrapper
+            +positioner
+                +title('Ваш вопрос отправлен').question-form__title
+                p.question-form__text В ближайшее время с вами свяжится наши специалисты
+                +button('Хорошо').question-form__button.question-form__button-complete
