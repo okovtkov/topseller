@@ -12,6 +12,7 @@ $text: #1D293F;
     color: $text;
     opacity: 0;
     transition: opacity 0.5s ease;
+    overflow-y: scroll;
     z-index: -2;
 
     .positioner {
@@ -233,6 +234,7 @@ $text: #1D293F;
     margin-left: auto;
     margin-right: auto;
     margin-top: 32px;
+    margin-bottom: 32px;
     background-color: $bgc;
     color: white;
 
