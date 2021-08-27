@@ -35,3 +35,4 @@ import "../components/questions/questions.scss";
 import "../components/questions/questions.js";
 import "../components/question-form/question-form.scss";
 import "../components/question-form/question-form.js";
+import "../components/footer/footer.scss";

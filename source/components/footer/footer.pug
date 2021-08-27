@@ -1,0 +1,25 @@
+include ../positioner/positioner
+include ../title/title
+include ../svg-icon/svg-icon
+
+mixin footer
+    footer.footer
+        +positioner
+            .footer__wrapper
+                a(href="#").footer__logo 
+                    +svg-icon('logo')
+                .footer__container
+                    p.footer__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate nec sed nunc tortor molestie tortor
+                    .footer__item
+                        a(href="#").footer__link Политика конфиденциальности
+                        a(href="#").footer__link Условия использования сервиса
+                        a(href="#").footer__link Реквизиты
+                    .footer__item
+                        a(href="#").footer__link Отзывы
+                        a(href="#").footer__link Тарифы
+                        a(href="#").footer__link О сервисе
+                    .footer__item
+                        a(href="#").footer__link.footer__link_blue +7(495)409-9891
+                        a(href="#").footer__link.footer__link_blue info@topse11er.ru
+                        a(href="#").footer__link.footer__link_blue Telegram
+                    
