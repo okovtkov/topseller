@@ -3,40 +3,20 @@ $text: #1D293F;
 
 .question-form__form-wrapper,
 .question-form__complete-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    display: none;
+    width: 100%;
     background-color: white;
     color: $text;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    overflow-y: scroll;
-    z-index: -2;
-
-    .positioner {
-        @media screen and (min-width: 1024px) {
-            position: relative;
-        }
-    }
-}
-
-.question-form__complete-wrapper .positioner {
-    padding-top: 150px;
 }
 
 .question-form__form-wrapper_open,
 .question-form__complete-wrapper_open {
-    z-index: 2;
-    opacity: 1;
+    position: relative;
+    display: block;
 }
 
 .question-form__form-wrapper_open {
     @media screen and (min-width: 1024px) {
-        background-color: $bgc;
-        color: #fff;
-
         .positioner {
             margin-top: 160px;
         }
@@ -45,8 +25,8 @@ $text: #1D293F;
 
 .question-form__close {
     position: absolute;
-    top: 10px;
-    right: 20px;
+    top: -35px;
+    right: -15px;
     width: 24px;
     height: 24px;
     background-color: transparent;
@@ -61,84 +41,18 @@ $text: #1D293F;
             position: absolute;
             top: 3px;
             left: 40px;
-            color: white;
+            color: #8C97AC;
             font-size: 18px;
             content: 'Закрыть';
-        }
-
-        svg path {
-            stroke: white;
         }
     }
 }
 
 .question-form__marketplaces {
-    margin-left: 34px;
     margin-bottom: 32px;
-    margin-top: 44px;
 
     @media screen and (min-width: 1024px) {
         display: flex;
-        margin-left: 34px;
-    }
-}
-
-.question-form__radio {
-    display: none;
-
-    &:checked + .question-form__label::before {
-        background-color: $bgc;
-
-        @media screen and (min-width: 1024px) {
-            background-color: darken($bgc, 5%);
-        }
-    }
-
-    &:checked + .question-form__label::after {
-        position: absolute;
-        top: 4px;
-        left: -22px;
-        width: 10px;
-        height: 10px;
-        background-color: #fff;
-        border-radius: 55%;
-        content: '';
-    }
-
-    &:checked + .question-form__politics::after {
-        width: 11px;
-        top: 16px;
-        left: 5.5px;
-
-        @media screen and (min-width: 768px) {
-            top: 6px;
-            left: 5.7px;
-        }
-    }
-}
-
-.question-form__label {
-    position: relative;
-    margin-right: 34px;
-    cursor: pointer;
-
-    @media screen and (min-width: 1024px) {
-        margin-right: 72px;
-    }
-
-    &::before {
-        position: absolute;
-        top: -2px;
-        left: -28px;
-        height: 22px;
-        width: 22px;
-        background-color: #E9F7FE;
-        border-radius: 50%;
-        content: '';
-    }
-
-    &:last-child {
-        margin-right: 0;
     }
 }
 
@@ -160,11 +74,6 @@ $text: #1D293F;
 
     @media screen and (min-width: 1024px) {
         background-color: rgba(255, 255, 255, 0.1);
-        color: #fff;
-
-        &::-webkit-input-placeholder {
-            color: #fff;
-        }
     }
 }
 
@@ -190,10 +99,6 @@ $text: #1D293F;
     @media screen and (min-width: 1024px) {
         display: flex;
         align-items: center;
-    }
-
-    span {
-        font-weight: bold;
     }
 }
 
@@ -234,22 +139,62 @@ $text: #1D293F;
     margin-left: auto;
     margin-right: auto;
     margin-top: 32px;
-    margin-bottom: 32px;
     background-color: $bgc;
     color: white;
 
     @media screen and (min-width: 1024px) {
         margin-top: 0;
         margin-right: 0;
-        background-color: #fff;
-        color: $bgc;
     }
 }
 
 .question-form__button-complete {
     @media screen and (min-width: 1024px) {
         margin-right: auto;
+        margin-bottom: 0;
         background-color: $bgc;
         color: white;
+    }
+}
+
+.question-form_primary {
+    .question-form__form-wrapper_open {
+        background-color: $bgc;
+        color: white;
+    }
+
+    .question-form__button-send,
+    .question-form__button-complete {
+        background-color: #fff;
+        color: $bgc;
+    }
+
+    .question-form__input,
+    .question-form__textarea {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+
+        &::-webkit-input-placeholder {
+            color: #fff;
+        }
+    }
+
+    .question-form__close {
+        svg path {
+            stroke: white;
+        }
+
+        @media screen and (min-width: 1024px) {
+            &::after {
+                color: white;
+                font-size: 18px;
+                content: 'Закрыть';
+            }
+        }
+    }
+
+    .question-form__complete-wrapper {
+        color: white;
+        background-color: $bgc;
     }
 }

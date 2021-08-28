@@ -1,13 +1,19 @@
 include ../positioner/positioner
 include ../title/title
 include ../button/button
+include ../question-form/question-form
 
 mixin consultation(reverse)
-    +positioner('section').consultation(class=reverse)
-        .consultation__icons
-            .consultation__question ?
-            .consultation__answer !
-        .consultation__content
-            +title('Нужна консультация?').consultation__title
-            p.consultation__text Наши специалисты ответят на любой интересующий вопрос
-            +button('Задать вопрос').consultation__button.question-button
+    section.consultation
+        +positioner
+            if (reverse === 'reverse') 
+                - let = reverse = 'consultation__wrapper_reverse'
+            .consultation__wrapper(class=reverse)
+                .consultation__icons
+                    .consultation__question ?
+                    .consultation__answer !
+                .consultation__content
+                    +title('Нужна консультация?').consultation__title
+                    p.consultation__text Наши специалисты ответят на любой интересующий вопрос
+                    +button('Задать вопрос').consultation__button.question-button
+            +question-form

@@ -1,16 +1,24 @@
 .consultation {
+    padding: 56px 0;
+
+    @media screen and (min-width: 1024px) {
+        padding: 88px 0;
+    }
+}
+
+.consultation__wrapper {
     display: flex;
     flex-direction: column;
 
     @media screen and (min-width: 768px) {
         flex-direction: row;
         justify-content: center;
-        padding: 5% 0;
     }
 }
 
-.consultation_reverse {
+.consultation__wrapper_reverse {
     @media screen and (min-width: 768px) {
+        display: flex;
         flex-direction: row-reverse;
 
         .consultation__content {

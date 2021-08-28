@@ -12,6 +12,11 @@ $text: #1D293F;
     }
 }
 
+.questions__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 .questions__title {
     margin-bottom: 32px;
 }
