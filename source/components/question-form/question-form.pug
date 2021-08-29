@@ -4,8 +4,8 @@ include ../button/button
 include ../radio/radio
 include ../svg-icon/svg-icon
 
-mixin question-form(bgc = 'white')
-    - let background = `question-form_${bgc}`;
+mixin question-form(options)
+    - let background = `question-form_${options.color}`;
     section.question-form(class=background)
         .question-form__form-wrapper
             button.question-form__close
@@ -22,7 +22,7 @@ mixin question-form(bgc = 'white')
                     input(type="text" name="name" placeholder="Имя" required).question-form__input
                     input(type="email" name="email" placeholder="Email" required).question-form__input
                     input(type="tel" name="tel" placeholder="Телефон" required).question-form__input
-                textarea(name="question", cols="30", rows="4" placeholder="Ваш вопрос").question-form__textarea
+                textarea(name=options.name, cols="30", rows="4" placeholder="Ваш вопрос").question-form__textarea
                 .question-form__send
                     +radio('politics')
                         | Ознакомлен с <span> Политикой конфиденциальности </span>

@@ -2,6 +2,7 @@ include ../positioner/positioner
 include ../title/title
 include ../svg-icon/svg-icon
 include ../button/button
+include ../tariffs-form/tariffs-form
 
 mixin tariffs
     section.tariffs#tariffs
@@ -15,38 +16,46 @@ mixin tariffs
                         a(href="#one-month").tariffs__link 1 месяц
                 ul.tariffs__list.tariffs__list_active#six-month
                     li.tariffs__item
-                        h3.tariffs__name Lite
-                        ul.tariffs__list-advantages
-                            li.tariffs__item-advantages Интеграция по артикулам
-                            li.tariffs__item-advantages Поддержка модели FBO
-                            li.tariffs__item-advantages Поддержка модели FBS
-                        span.tariffs__price 3 990 ₽
-                        +button('Выбрать', 'a href="#"').tariffs__button
+                        .tariffs__item-wrapper
+                            h3.tariffs__name Lite
+                            ul.tariffs__list-advantages
+                                li.tariffs__item-advantages Интеграция по артикулам
+                                li.tariffs__item-advantages Поддержка модели FBO
+                                li.tariffs__item-advantages Поддержка модели FBS
+                            span.tariffs__price 3 990 ₽
+                            +button('Выбрать').tariffs__button
+                        +tariffs-form({name: 'question', title: 'Подключение тарифа "Lite"'})
                     li.tariffs__item
-                        h3.tariffs__name Pro
-                        ul.tariffs__list-advantages
-                            li.tariffs__item-advantages Интеграция по артикулам
-                            li.tariffs__item-advantages Поддержка модели FBO
-                            li.tariffs__item-advantages Поддержка модели FBS
-                        span.tariffs__price 9 990 ₽
-                        +button('Выбрать', 'a href="#"').tariffs__button
+                        .tariffs__item-wrapper
+                            h3.tariffs__name Pro
+                            ul.tariffs__list-advantages
+                                li.tariffs__item-advantages Интеграция по артикулам
+                                li.tariffs__item-advantages Поддержка модели FBO
+                                li.tariffs__item-advantages Поддержка модели FBS
+                            span.tariffs__price 9 990 ₽
+                            +button('Выбрать').tariffs__button
+                        +tariffs-form({name: 'question', title: 'Подключение тарифа "Pro"'})
                 ul.tariffs__list#one-month
                     li.tariffs__item
-                        h3.tariffs__name Lite
-                        ul.tariffs__list-advantages
-                            li.tariffs__item-advantages Интеграция по артикулам
-                            li.tariffs__item-advantages Поддержка модели FBO
-                            li.tariffs__item-advantages Поддержка модели FBS
-                        span.tariffs__price 799 ₽
-                        +button('Выбрать', 'a href="#"').tariffs__button
+                        .tariffs__item-wrapper
+                            h3.tariffs__name Lite
+                            ul.tariffs__list-advantages
+                                li.tariffs__item-advantages Интеграция по артикулам
+                                li.tariffs__item-advantages Поддержка модели FBO
+                                li.tariffs__item-advantages Поддержка модели FBS
+                            span.tariffs__price 799 ₽
+                            +button('Выбрать').tariffs__button
+                        +tariffs-form({name: 'question', title: 'Подключение тарифа "Lite"'})
                     li.tariffs__item
-                        h3.tariffs__name Pro
-                        ul.tariffs__list-advantages
-                            li.tariffs__item-advantages Интеграция по артикулам
-                            li.tariffs__item-advantages Поддержка модели FBO
-                            li.tariffs__item-advantages Поддержка модели FBS
-                        span.tariffs__price 1 999 ₽
-                        +button('Выбрать', 'a href="#"').tariffs__button
+                        .tariffs__item-wrapper
+                            h3.tariffs__name Pro
+                            ul.tariffs__list-advantages
+                                li.tariffs__item-advantages Интеграция по артикулам
+                                li.tariffs__item-advantages Поддержка модели FBO
+                                li.tariffs__item-advantages Поддержка модели FBS
+                            span.tariffs__price 1 999 ₽
+                            +button('Выбрать').tariffs__button
+                        +tariffs-form({name: 'question', title: 'Подключение тарифа "Pro"'})
                 .tariffs__links
                     a(href="#").tariffs__link-all Смотреть все функции
                     a(href="#").tariffs__differences

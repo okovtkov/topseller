@@ -37,3 +37,5 @@ import "../components/question-form/question-form.scss";
 import "../components/question-form/question-form.js";
 import "../components/footer/footer.scss";
 import "../components/radio/radio.scss";
+import "../components/tariffs-form/tariffs-form.js";
+import "../components/tariffs-form/tariffs-form.scss";

@@ -4,7 +4,7 @@ class QuestionForm {
     constructor(form) {
         this.form = form;
         this.wrapper = form.closest('section');
-        this.button = form.closest('section').closest('.positioner').querySelector('.question-button');
+        this.button = form.closest('section').closest('.positioner').querySelector('.button');
         this.close = this.wrapper.querySelector('.question-form__close');
         this.send = this.wrapper.querySelector('.question-form__button-send');
         this.formWrapper = this.wrapper.querySelector('.question-form__form-wrapper');

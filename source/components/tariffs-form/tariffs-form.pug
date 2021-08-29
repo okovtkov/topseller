@@ -1,0 +1,35 @@
+include ../positioner/positioner
+include ../title/title
+include ../button/button
+include ../radio/radio
+include ../svg-icon/svg-icon
+
+mixin tariffs-form(options)
+    - let background = `form_${options.color}`;
+    section.tariffs-form
+        +positioner
+            .tariffs-form__form-wrapper
+                h2.tariffs-form__main-title #{options.title}
+                button.tariffs-form__close
+                    +svg-icon('close')
+                form(action="#" name=options.name).tariffs-form__form
+                    .tariffs-form__marketplaces
+                        +radio('marketplace')
+                            | OZON
+                        +radio('marketplace')
+                            | Wildberries
+                        +radio('marketplace')
+                            | Yandex
+                    .tariffs-form__inputs
+                        input(type="text" name="name" placeholder="Имя" required).tariffs-form__input
+                        input(type="email" name="email" placeholder="Email" required).tariffs-form__input
+                        input(type="tel" name="tel" placeholder="Телефон" required).tariffs-form__input
+                        +button('Отправить заявку').button.tariffs-form__button.tariffs-form__button-send
+                    .tariffs-form__politics
+                        +radio('politics')
+                            | Ознакомлен с <span> Политикой конфиденциальности </span>
+            .tariffs-form__complete-wrapper
+                +positioner
+                    +title('Заявка отправлена').tariffs-form__title
+                    p.tariffs-form__text Вы молодец
+                    +button('Хорошо').tariffs-form__button.tariffs-form__button-complete

@@ -100,6 +100,14 @@ $primary: #0F53FA;
 }
 
 .tariffs__item {
+    @media screen and (min-width: 1024px) {
+        padding: 31.5px 0;
+        border-top: 1px solid #ECEFF4;
+        border-bottom: 1px solid #ECEFF4;
+    }
+}
+
+.tariffs__item-wrapper {
     display: flex;
     flex-direction: column;
     margin-right: 24px;
@@ -108,10 +116,7 @@ $primary: #0F53FA;
     @media screen and (min-width: 1024px) {
         flex-direction: row;
         justify-content: space-between;
-        padding: 31.5px 0;
         margin: 0;
-        border-top: 1px solid #ECEFF4;
-        border-bottom: 1px solid #ECEFF4;
     }
 }
 
