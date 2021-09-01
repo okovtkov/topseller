@@ -1,0 +1,20 @@
+include ../positioner/positioner
+include ../svg-icon/svg-icon
+
+mixin partner(options)
+    section.partner
+        .partner__close
+            +svg-icon('close')
+        +positioner.partner__wrapper
+            .partner__container
+                img(src=`/img/${options.image}`, alt="партнёр").partner__image
+            .partner__info
+                h3.partner__title #{options.title}
+                p.partner__about #{options.about}
+                p.partner__text #{options.text}
+                .partner__contacts
+                    a(href=`telegram.org/${options.telegram}`).partner__telegram
+                        +svg-icon('telegram')
+                        span.partner__id #{options.telegram}
+                    a(href=`${options.link}`).partner__link #{options.linkText}
+    .partner-background

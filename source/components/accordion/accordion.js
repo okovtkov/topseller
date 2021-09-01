@@ -3,7 +3,6 @@
 class Accordion {
     constructor(element) {
         this.element = element;
-        console.log(this.element)
         let summaries = Array.from(this.element.querySelectorAll('details summary'));
         summaries.forEach(summary => {
             summary.addEventListener('click', (event) => this.toggle(event, summary))
