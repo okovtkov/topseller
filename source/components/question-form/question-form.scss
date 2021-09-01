@@ -62,7 +62,6 @@ $text: #1D293F;
     }
 }
 
-.question-form__input,
 .question-form__textarea {
     width: 100%;
     margin-bottom: 16px;
@@ -70,26 +69,12 @@ $text: #1D293F;
     border: 1px solid #E6E6E6;
     box-sizing: border-box;
     border-radius: 8px;
+    font-family: inherit;
     outline: none;
 
     @media screen and (min-width: 1024px) {
-        background-color: rgba(255, 255, 255, 0.1);
-    }
-}
-
-.question-form__textarea {
-    @media screen and (min-width: 1024px) {
         height: 200px;
-    }
-}
-
-.question-form__input {
-    @media screen and (min-width: 1024px) {
-        margin-right: 24px;
-
-        &:last-child {
-            margin-right: 0;
-        }
+        background-color: rgba(255, 255, 255, 0.1);
     }
 }
 
@@ -169,7 +154,6 @@ $text: #1D293F;
         color: $bgc;
     }
 
-    .question-form__input,
     .question-form__textarea {
         background-color: rgba(255, 255, 255, 0.1);
         color: #fff;

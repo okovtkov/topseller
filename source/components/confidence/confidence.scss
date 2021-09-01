@@ -50,6 +50,7 @@ $bgc: #E9F7FE;
     margin-left: -6.6%;
     padding-left: 6.6%;
     overflow-x: scroll;
+    transition: all 0.5s ease;
 
     @media screen and (min-width: 1024px) {
         width: 100%;
@@ -79,49 +80,4 @@ $bgc: #E9F7FE;
 
 .confidence__image {
     width: 100%;
-}
-
-.confidence__pages {
-    position: relative;
-    bottom: -15px;
-    left: 0;
-    display: flex;
-    width: 100px;
-    height: 3px;
-    background-color: #E2E4E8;
-
-    @media screen and (min-width: 1024px) {
-        background-color: transparent;
-        width: 188px;
-    }
-}
-
-.confidence__slider {
-    position: absolute;
-    width: 29px;
-    height: 3px;
-    background-color: #0F53FA;
-    z-index: 1;
-
-    @media screen and (min-width: 1024px) {
-        display: none;
-    }
-}
-
-.confidence__page {
-    display: none;
-    width: 29px;
-    height: 3px;
-    margin-right: 16px;
-    border-radius: 2px;
-    background-color: #E2E4E8;
-
-    @media screen and (min-width: 1024px) {
-        display: block;
-        transition: all 0.5s ease;
-    }
-}
-
-.confidence__page_current {
-    background-color: #0F53FA;
 }

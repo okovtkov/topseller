@@ -3,15 +3,15 @@ include ../positioner/positioner
 mixin statistics
     article.statistics
         +positioner.statistics__container
-            .statistics__cell
-                span.statistics__number 100k
-                p.statistics__text Регистраций в системе за 2021 год
-            .statistics__cell
-                span.statistics__number 3.6k
-                p.statistics__text Количество новых товаров ежедневно
-            .statistics__cell
-                span.statistics__number 99%
-                p.statistics__text Довольных клиентов нашей платформы
-            .statistics__cell
-                span.statistics__number 456k
-                p.statistics__text Количество новых товаров ежедневно
+            dl.statistics__cell
+                dt.span.statistics__number 100k
+                dd.statistics__text Регистраций в системе за 2021 год
+            dl.statistics__cell
+                dt.span.statistics__number 3.6k
+                dd.statistics__text Количество новых товаров ежедневно
+            dl.statistics__cell
+                dt.span.statistics__number 99%
+                dd.statistics__text Довольных клиентов нашей платформы
+            dl.statistics__cell
+                dt.span.statistics__number 456k
+                dd.statistics__text Количество новых товаров ежедневно

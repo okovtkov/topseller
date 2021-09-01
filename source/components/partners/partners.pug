@@ -1,5 +1,6 @@
 include ../positioner/positioner
 include ../title/title
+include ../scroll/scroll
 include ../svg-icon/svg-icon
 
 mixin partners
@@ -9,7 +10,7 @@ mixin partners
                 .partners__icon
                     +svg-icon('partners')
                 header.partners__header
-                    +title('Партнеры').partners__title
+                    +title.partners__title Партнеры
                     .partners__buttons
                         .partners__button.partners__button_prev
                             +svg-icon('arrow')
@@ -40,9 +41,4 @@ mixin partners
                             h3.partners__title-3 Успех компании Adidas
                             p.partners__text Как мы увеличили продажи и улучшили автоматизацию бизнеса вместе с Топселлер
                             a(href="#").partners__link Прочитать →
-                .partners__pages
-                    .partners__slider
-                    .partners__page.partners__page_current
-                    .partners__page
-                    .partners__page
-                    .partners__page
+                +scroll({desktop: true, pages: 4})

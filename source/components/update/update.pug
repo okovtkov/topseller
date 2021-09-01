@@ -1,0 +1,16 @@
+mixin update(options)
+    #{options.tag}.update&attributes(attributes)
+        .update__wrapper
+            .update__status
+                +svg-icon(`${options.status}`)
+        .update__info
+            h3.update__heading #{options.title}
+            p.update__text #{options.text}
+            .update__time
+                +svg-icon(`${options.icon}`)
+                if (options.soon)
+                    -let soon = 'update__date_soon';
+                span.update__date(class=soon) #{options.date}
+            .update__keywords
+                each keyword in options.keywords
+                    span.update__keyword #{keyword}

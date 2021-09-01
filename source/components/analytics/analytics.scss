@@ -4,7 +4,7 @@ $text: #1D293F;
 .analytics {
     position: relative;
     background-color: $bgc;
-    padding: 56px 0 0 0;
+    padding: 56px 0;
     overflow: hidden;
 
     @media screen and (min-width: 1024px) {
@@ -12,6 +12,10 @@ $text: #1D293F;
         background-image: url('./bg.png');
         background-position: top 90% left 0;
         background-repeat: no-repeat;
+    }
+
+    @media screen and (min-width: 1250px) {
+        padding: 88px 0;
     }
 }
 
@@ -37,10 +41,14 @@ $text: #1D293F;
 
     @media screen and (min-width: 1024px) {
         position: absolute;
-        top: 10%;
+        top: 7%;
         right: 0;
-        width: 45%;
+        width: 50%;
         border-radius: 0;
+    }
+
+    @media screen and (min-width: 1100px) {
+        top: 0;
     }
 
     @media screen and (min-width: 1200px) {
@@ -73,40 +81,37 @@ $text: #1D293F;
 }
 
 .analytics__list {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    width: 100vw;
-    margin-left: -6.6%;
-    padding-left: 6.6%;
-    margin-bottom: 0;
-    overflow-x: scroll;
-    list-style-type: none;
-
     @media screen and (min-width: 1024px) {
-        flex-direction: column;
-        width: 90%;
-        height: 370px;
-        margin: 0;
-        margin-left: -100px;
+        min-width: 90%;
+        max-height: 370px;
         padding: 2.2% 0;
-        overflow-x: visible;
-        overflow-y: hidden;
+        overflow-y: scroll;
     }
 }
 
 .analytics__item {
     min-width: 261px;
-    padding: 16px;
-    background-color: #fff;
+    max-width: 400px;
     margin-right: 16px;
-    margin-bottom: 56px;
-    border-radius: 5px;
     transition: margin 0.5s ease;
 
+    details{
+        padding: 16px;
+        background-color: #fff;
+        border-radius: 5px;
+        &[open] {
+            box-shadow: 0px 5px 40px rgba(14, 86, 124, 0.1);
+            summary {
+                margin-bottom: 10px;
+            }
+        }
+
+        summary {
+            list-style: none;
+        }
+    } 
 
     @media screen and (min-width: 1024px) {
-        width: 293px;
         margin-left: 100px;
         margin-bottom: 32px;
         margin-right: 0;
@@ -122,19 +127,6 @@ $text: #1D293F;
         @media screen and (min-width: 1024px) {
             order: 0;
         }
-    }
-}
-
-.analytics__item_open {
-    box-shadow: 0px 10px 40px 1px rgba(14, 86, 124, 0.1);
-    max-width: 234px;
-
-    @media screen and (min-width: 1024px) {
-        min-width: 50%;
-    }
-
-    @media screen and (min-width: 1200px) {
-        min-width: 40%;
     }
 }
 
@@ -165,8 +157,14 @@ $text: #1D293F;
     margin-top: 20px;
 
     @media screen and (min-width: 1024px) {
+        left: 4%;
         display: block;
         margin-left: 100px;
+    }
+
+    @media screen and (min-width: 1250px) {
+        left: 6%;
+        bottom: 50px;
     }
 }
 
@@ -181,26 +179,4 @@ $text: #1D293F;
         margin-left: 41px;
         transform: rotate(-90deg);
     }
-}
-
-.analytics__pages {
-    position: relative;
-    bottom: 35px;
-    left: 0;
-    display: flex;
-    width: 100px;
-    height: 3px;
-    background-color: #E2E4E8;
-
-    @media screen and (min-width: 1024px) {
-        display: none;
-    }
-}
-
-.analytics__slider {
-    position: absolute;
-    width: 29px;
-    height: 3px;
-    background-color: #0F53FA;
-    z-index: 1;
 }

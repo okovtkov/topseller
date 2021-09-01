@@ -1,0 +1,7 @@
+include ../slider/slider
+
+mixin scroll(options = {})
+    .scroll
+        .scroll__slider
+    if (options.desktop)
+        +slider(options.pages)

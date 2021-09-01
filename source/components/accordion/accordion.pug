@@ -1,0 +1,8 @@
+mixin accordion(items)
+    ul.accordion&attributes(attributes)
+        each item in items
+            li.accordion__item
+                details
+                    summary #{item.title}
+                    p.accordion__text
+                    | #{item.text}

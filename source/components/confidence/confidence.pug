@@ -1,5 +1,6 @@
 include ../positioner/positioner
 include ../title/title
+include ../scroll/scroll
 include ../svg-icon/svg-icon
 
 mixin confidence
@@ -9,7 +10,7 @@ mixin confidence
                 .confidence__like
                     +svg-icon('like')
                 header.confidence__header
-                    +title('Нам доверяют').confidence__title
+                    +title.confidence__title Нам доверяют
                     .confidence__buttons
                         .confidence__button.confidence__button_prev
                             +svg-icon('arrow')
@@ -32,10 +33,4 @@ mixin confidence
                         img(src="/img/confidence.png", alt="нечто непонятное").confidence__image
                     li.confidence__item
                         img(src="/img/confidence.png", alt="нечто непонятное").confidence__image
-                .confidence__pages
-                    .confidence__slider
-                    .confidence__page.confidence__page_current
-                    .confidence__page
-                    .confidence__page
-                    .confidence__page
-                    .confidence__page
+                +scroll({desktop: true, pages: 5})

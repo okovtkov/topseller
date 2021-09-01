@@ -2,6 +2,7 @@ include ../positioner/positioner
 include ../title/title
 include ../button/button
 include ../radio/radio
+include ../text-field/text-field
 include ../svg-icon/svg-icon
 
 mixin tariffs-form(options)
@@ -21,15 +22,15 @@ mixin tariffs-form(options)
                         +radio('marketplace')
                             | Yandex
                     .tariffs-form__inputs
-                        input(type="text" name="name" placeholder="Имя" required).tariffs-form__input
-                        input(type="email" name="email" placeholder="Email" required).tariffs-form__input
-                        input(type="tel" name="tel" placeholder="Телефон" required).tariffs-form__input
-                        +button('Отправить заявку').button.tariffs-form__button.tariffs-form__button-send
+                        +text-field({name: 'name', placeholder: 'Имя', required: true}).tariffs-form__input
+                        +text-field({name: 'email', placeholder: 'Email', required: true}).tariffs-form__input
+                        +text-field({name: 'tel', placeholder: 'Телефон', required: true}).tariffs-form__input
+                        +button.button.tariffs-form__button.tariffs-form__button-send Отправить заявку
                     .tariffs-form__politics
                         +radio('politics')
                             | Ознакомлен с <span> Политикой конфиденциальности </span>
             .tariffs-form__complete-wrapper
                 +positioner
-                    +title('Заявка отправлена').tariffs-form__title
+                    +title.tariffs-form__title Заявка отправлена
                     p.tariffs-form__text Вы молодец
-                    +button('Хорошо').tariffs-form__button.tariffs-form__button-complete
+                    +button.tariffs-form__button.tariffs-form__button-complete Хорошо

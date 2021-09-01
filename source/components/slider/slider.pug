@@ -1,0 +1,7 @@
+mixin slider(pages)
+    .slider
+        .slider__page.slider__page_current
+        - let count = 1;
+        while count < pages
+            .slider__page
+            - count += 1;

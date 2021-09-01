@@ -3,7 +3,6 @@ include ../video/video
 include ../marketplaces/marketplaces
 
 mixin description
-    +positioner
-        article.description
-            +video.description__video
-            +marketplaces.description__marketplaces
+    +positioner('article').description
+        +video.description__video
+        +marketplaces.description__marketplaces

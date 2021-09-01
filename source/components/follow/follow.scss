@@ -119,28 +119,6 @@ $views: #8C97AC;
     }
 }
 
-.follow__pages {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    width: 100px;
-    height: 3px;
-    background-color: #E2E4E8;
-
-    @media screen and (min-width: 1024px) {
-        display: none;
-    }
-}
-
-.follow__slider {
-    position: absolute;
-    width: 29px;
-    height: 3px;
-    background-color: #0F53FA;
-    z-index: 1;
-}
-
 .follow__button_right,
 .follow__button_left {
     display: none;

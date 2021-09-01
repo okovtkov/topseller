@@ -1,35 +1,25 @@
 include ../positioner/positioner
 include ../title/title
+include ../scroll/scroll
+include ../accordion/accordion
 include ../svg-icon/svg-icon
 
 mixin analytics
     section.analytics
         +positioner
-            +title('Аналитика и финансы').analytics__title
+            +title.analytics__title Аналитика и финансы
             .analytics__wrapper
-                .analytics__container
-                    img(src="/img/possibilities.jpg", alt="Аналитика и финансы").analytics__image.analytics__image_pc
-                    img(src="/img/posibilities.jpg", alt="Аналитика и финансы").analytics__image.analytics__image_mob
-                ul.analytics__list
-                    li.analytics__item
-                        button.analytics__button Прибыли и убытки
-                        p.analytics__text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, reiciendis rem iure amet ducimus culpa eum a quo rerum ipsam, omnis dolore magnam quaerat quis saepe molestias maxime dicta pariatur.
-                    li.analytics__item
-                        button.analytics__button Рентабильность
-                        p.analytics__text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, reiciendis rem iure amet ducimus culpa eum a quo rerum ipsam, omnis dolore magnam quaerat quis saepe molestias maxime dicta pariatur.
-                    li.analytics__item
-                        button.analytics__button Маржинальность
-                        p.analytics__text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, reiciendis rem iure amet ducimus culpa eum a quo rerum ipsam, omnis dolore magnam quaerat quis saepe molestias maxime dicta pariatur.
-                    li.analytics__item
-                        button.analytics__button Обороты
-                        p.analytics__text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, reiciendis rem iure amet ducimus culpa eum a quo rerum ipsam, omnis dolore magnam quaerat quis saepe molestias maxime dicta pariatur.
-                    li.analytics__item
-                        button.analytics__button Прочее
-                        p.analytics__text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, reiciendis rem iure amet ducimus culpa eum a quo rerum ipsam, omnis dolore magnam quaerat quis saepe molestias maxime dicta pariatur.
-                    .analytics__buttons
-                        button.analytics__button-arrow.analytics__button-arrow_up
-                            +svg-icon('arrow')
-                        button.analytics__button-arrow.analytics__button-arrow_down
-                            +svg-icon('arrow')
-                .analytics__pages
-                    .analytics__slider
+                picture.analytics__container
+                    source(srcset="/img/possibilities.jpg", alt="Аналитика и финансы" media="(min-width: 1024px)").analytics__image
+                    img(src="/img/posibilities.jpg", alt="Аналитика и финансы").analytics__image
+                +accordion([{title: 'Прибыли и убытки', text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, reiciendis rem iure amet ducimus culpa eum a quo rerum ipsam, omnis dolore magnam quaerat quis saepe molestias maxime dicta pariatur.'},
+                {title: 'Рентабильность', text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, reiciendis rem iure amet ducimus culpa eum a quo rerum ipsam, omnis dolore magnam quaerat quis saepe molestias maxime dicta pariatur.'},
+                {title: 'Маржинальность', text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, reiciendis rem iure amet ducimus culpa eum a quo rerum ipsam, omnis dolore magnam quaerat quis saepe molestias maxime dicta pariatur.'},
+                {title: 'Обороты', text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, reiciendis rem iure amet ducimus culpa eum a quo rerum ipsam, omnis dolore magnam quaerat quis saepe molestias maxime dicta pariatur.'},
+                {title: 'Прочее', text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, reiciendis rem iure amet ducimus culpa eum a quo rerum ipsam, omnis dolore magnam quaerat quis saepe molestias maxime dicta pariatur.'}]).analytics__list
+                .analytics__buttons
+                    button.analytics__button-arrow.analytics__button-arrow_up
+                        +svg-icon('arrow')
+                    button.analytics__button-arrow.analytics__button-arrow_down
+                        +svg-icon('arrow')
+                +scroll

@@ -3,6 +3,7 @@ include ../title/title
 include ../button/button
 include ../radio/radio
 include ../svg-icon/svg-icon
+include ../text-field/text-field
 
 mixin question-form(options)
     - let background = `question-form_${options.color}`;
@@ -19,9 +20,9 @@ mixin question-form(options)
                     +radio('marketplace')
                         | Yandex
                 .question-form__inputs
-                    input(type="text" name="name" placeholder="Имя" required).question-form__input
-                    input(type="email" name="email" placeholder="Email" required).question-form__input
-                    input(type="tel" name="tel" placeholder="Телефон" required).question-form__input
+                    +text-field({name: 'name', placeholder: 'Имя', required: true}).question-form__input
+                    +text-field({name: 'email', placeholder: 'Email', required: true}).question-form__input
+                    +text-field({name: 'tel', placeholder: 'Телефон', required: true}).question-form__input
                 textarea(name=options.name, cols="30", rows="4" placeholder="Ваш вопрос").question-form__textarea
                 .question-form__send
                     +radio('politics')
@@ -29,6 +30,6 @@ mixin question-form(options)
                     input(type="submit" value="Отправить").button.question-form__button.question-form__button-send
         .question-form__complete-wrapper
             +positioner
-                +title('Ваш вопрос отправлен').question-form__title
-                p.question-form__text В ближайшее время с вами свяжится наши специалисты
-                +button('Хорошо').question-form__button.question-form__button-complete
+                +title.question-form__title Ваш вопрос отправлен
+                p.question-form__text В ближайшее время с вами свяжутся наши специалисты
+                +button.question-form__button.question-form__button-complete Хорошо

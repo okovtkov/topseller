@@ -5,30 +5,27 @@ include ../svg-icon/svg-icon
 mixin advantages
     section.advantages#advantages
         +positioner
-            +title('Преимущества').advantages__title
-            h2.advantages__title_large.advantages__title_mob fbo
-            .advantages__wrapper
-                h2.advantages__title.advantages__title_large.advantages__title_desk fbo
-                .advantages__container
-                    .advantages__item
-                        .advantages__icon
-                            +svg-icon('advantage')
-                        h3.advantages__title.advantages__title_3 Заголовок
-                        p.advantages__text Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    .advantages__item
-                        .advantages__icon
-                            +svg-icon('advantage')
-                        h3.advantages__title.advantages__title_3 Заголовок
-                        p.advantages__text Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    .advantages__item
-                        .advantages__icon
-                            +svg-icon('advantage')
-                        h3.advantages__title.advantages__title_3 Заголовок
-                        p.advantages__text Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            h2.advantages__title.advantages__title_large.advantages__title_mob fbs
-            .advantages__wrapper
-                h2.advantages__title.advantages__title_large.advantages__title_desk fbs
-                .advantages__item
+            +title.advantages__title.advantages__title_main Преимущества
+            h2.advantages__title.advantages__title_large fbo
+            ul.advantages__container
+                li.advantages__item
+                    .advantages__icon
+                        +svg-icon('advantage')
+                    h3.advantages__title.advantages__title_3 Заголовок
+                    p.advantages__text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                li.advantages__item
+                    .advantages__icon
+                        +svg-icon('advantage')
+                    h3.advantages__title.advantages__title_3 Заголовок
+                    p.advantages__text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                li.advantages__item
+                    .advantages__icon
+                        +svg-icon('advantage')
+                    h3.advantages__title.advantages__title_3 Заголовок
+                    p.advantages__text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            h2.advantages__title.advantages__title_large fbs
+            ul.advantages__container
+                li.advantages__item
                     .advantages__icon
                         +svg-icon('advantage')
                     h3.advantages__title.advantages__title_3 Заголовок

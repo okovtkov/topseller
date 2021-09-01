@@ -1,0 +1,29 @@
+.text-field {
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 16px;
+    border: 1px solid #E6E6E6;
+    border-radius: 8px;
+    font-family: inherit;
+    outline: none;
+
+    @media screen and (min-width: 1024px) {
+        background-color: rgba(255, 255, 255, 0.1);
+        margin-right: 24px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.question-form_primary {
+    .text-field {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+
+        &::-webkit-input-placeholder {
+            color: #fff;
+        }
+    }
+}

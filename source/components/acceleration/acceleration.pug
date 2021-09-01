@@ -1,27 +1,18 @@
 include ../positioner/positioner
 include ../title/title
+include ../accordion/accordion
+include ../scroll/scroll
 
 mixin acceleration
     section.acceleration
         +positioner
-            +title('Ускорение операционных процессов').acceleration__title_mob
             .acceleration__wrapper
-                .acceleration__container
-                    img(src="/img/acceleration_desk.jpg", alt="ускорение операционных процессов").acceleration__image.acceleration__image_pc
-                    img(src="/img/acceleration_mob.jpg", alt="ускорение операционных процессов").acceleration__image.acceleration__image_mob
-                ul.acceleration__list
-                    +title('Ускорение операционных процессов').acceleration__title_desk
-                    li.acceleration__item
-                        button.acceleration__button Сборка заказов
-                        p.acceleration__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate nec sed nunc tortor molestie tortor, nunc nec viverra. Tellus consectetur sapien ut velit orci enim.
-                    li.acceleration__item
-                        button.acceleration__button Резервы
-                        p.acceleration__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate nec sed nunc tortor molestie tortor, nunc nec viverra. Tellus consectetur sapien ut velit orci enim.
-                    li.acceleration__item
-                        button.acceleration__button Смена статусов
-                        p.acceleration__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate nec sed nunc tortor molestie tortor, nunc nec viverra. Tellus consectetur sapien ut velit orci enim.
-                    li.acceleration__item
-                        button.acceleration__button Умная лента стикеров
-                        p.acceleration__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate nec sed nunc tortor molestie tortor, nunc nec viverra. Tellus consectetur sapien ut velit orci enim.
-                .acceleration__pages
-                    .acceleration__slider
+                +title.acceleration__title Ускорение операционных процессов
+                picture.acceleration__container
+                    source(srcset="/img/acceleration_desk.jpg", alt="ускорение операционных процессов" media="(min-width: 1024px)").acceleration__image
+                    img(src="/img/acceleration_mob.jpg", alt="ускорение операционных процессов").acceleration__image
+                +accordion([{title: 'Сборка заказов', text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, reiciendis rem iure amet ducimus culpa eum a quo rerum ipsam, omnis dolore magnam quaerat quis saepe molestias maxime dicta pariatur.'},
+                {title: 'Резервы', text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, reiciendis rem iure amet ducimus culpa eum a quo rerum ipsam, omnis dolore magnam quaerat quis saepe molestias maxime dicta pariatur.'},
+                {title: 'Смена статусов', text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, reiciendis rem iure amet ducimus culpa eum a quo rerum ipsam, omnis dolore magnam quaerat quis saepe molestias maxime dicta pariatur.'},
+                {title: 'Умная лента стикеров', text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, reiciendis rem iure amet ducimus culpa eum a quo rerum ipsam, omnis dolore magnam quaerat quis saepe molestias maxime dicta pariatur.'}]).acceleration__list
+                +scroll

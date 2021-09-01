@@ -1,0 +1,27 @@
+.slider {
+    display: none;
+    width: 188px;
+
+    @media screen and (min-width: 1024px) {
+        display: flex;
+        margin-top: 16px;
+    }
+}
+
+.slider__page {
+    display: none;
+    width: 29px;
+    height: 3px;
+    margin-right: 16px;
+    border-radius: 2px;
+    background-color: #E2E4E8;
+
+    @media screen and (min-width: 1024px) {
+        display: block;
+        transition: all 0.5s ease;
+    }
+}
+
+.slider__page_current {
+    background-color: #0F53FA;
+}

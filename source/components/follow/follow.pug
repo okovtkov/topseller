@@ -1,12 +1,13 @@
 include ../positioner/positioner
 include ../title/title
+include ../scroll/scroll
 include ../svg-icon/svg-icon
 
 mixin follow
     section.follow
         +positioner
             .follow__title-container
-                +title('Следуйте за нами').follow__container-title
+                +title.follow__container-title Следуйте за нами
                 a(href="youtube.com").follow__link
                     img(src="/img/yt_large.png", alt="иконка youtube").follow__image.follow__image_desk
                     img(src="/img/yt_small.png", alt="иконка youtube").follow__image.follow__image_mob
@@ -37,8 +38,7 @@ mixin follow
                         h3.follow__name Название видео
                         .follow__views Просмотров 
                             span 48 900
-                .follow__pages
-                    .follow__slider
+            +scroll
             button.follow__button.follow__button_left
                 +svg-icon('arrow')
             button.follow__button.follow__button_right

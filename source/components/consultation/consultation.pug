@@ -3,17 +3,16 @@ include ../title/title
 include ../button/button
 include ../question-form/question-form
 
-mixin consultation(reverse)
+mixin consultation(options = {})
     section.consultation
         +positioner
-            if (reverse === 'reverse') 
-                - let = reverse = 'consultation__wrapper_reverse'
+            - let reverse = options.reverse? 'consultation__wrapper_reverse' : null;
             .consultation__wrapper(class=reverse)
                 .consultation__icons
                     .consultation__question ?
                     .consultation__answer !
                 .consultation__content
-                    +title('Нужна консультация?').consultation__title
+                    +title.consultation__title Нужна консультация?
                     p.consultation__text Наши специалисты ответят на любой интересующий вопрос
-                    +button('Задать вопрос').consultation__button.button
+                    +button.consultation__button.button Задать вопрос
             +question-form({name: 'question', color: 'white', textarea: true})

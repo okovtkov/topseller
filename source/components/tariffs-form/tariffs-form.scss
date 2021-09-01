@@ -119,27 +119,13 @@ $text: #1D293F;
 }
 
 .tariffs-form__input {
-    width: 100%;
-    margin-bottom: 16px;
-    padding: 16px;
-    border: 1px solid #E6E6E6;
-    box-sizing: border-box;
-    border-radius: 8px;
-    outline: none;
-
     &:last-of-type {
         margin-bottom: 0;
     }
 
     @media screen and (min-width: 1024px) {
-        margin-right: 24px;
         padding: 0 16px;
         height: 64px;
-        background-color: rgba(255, 255, 255, 0.1);
-
-        &:last-child {
-            margin-right: 0;
-        }
     }
 }
 
@@ -209,47 +195,5 @@ $text: #1D293F;
         margin-bottom: 0;
         background-color: $bgc;
         color: white;
-    }
-}
-
-.tariffs-form_primary {
-    .tariffs-form__form-wrapper_open {
-        background-color: $bgc;
-        color: white;
-    }
-
-    .tariffs-form__button-send,
-    .tariffs-form__button-complete {
-        background-color: #fff;
-        color: $bgc;
-    }
-
-    .tariffs-form__input,
-    .tariffs-form__textarea {
-        background-color: rgba(255, 255, 255, 0.1);
-        color: #fff;
-
-        &::-webkit-input-placeholder {
-            color: #fff;
-        }
-    }
-
-    .tariffs-form__close {
-        svg path {
-            stroke: white;
-        }
-
-        @media screen and (min-width: 1024px) {
-            &::after {
-                color: white;
-                font-size: 18px;
-                content: 'Закрыть';
-            }
-        }
-    }
-
-    .tariffs-form__complete-wrapper {
-        color: white;
-        background-color: $bgc;
     }
 }

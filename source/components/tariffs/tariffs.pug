@@ -8,7 +8,7 @@ mixin tariffs
     section.tariffs#tariffs
         +positioner
             .tariffs__wrapper
-                +title('Тарифы').tariffs__title
+                +title.tariffs__title Тарифы
                 .tariffs__about
                     p.tariffs__text Приложение Topse11er работает по подписке. Вы можете оценить все возможности приложения в течение бесплатного тестового периода (3 дня)
                     .tariffs__container
@@ -23,7 +23,7 @@ mixin tariffs
                                 li.tariffs__item-advantages Поддержка модели FBO
                                 li.tariffs__item-advantages Поддержка модели FBS
                             span.tariffs__price 3 990 ₽
-                            +button('Выбрать').tariffs__button
+                            +button.tariffs__button Выбрать
                         +tariffs-form({name: 'question', title: 'Подключение тарифа "Lite"'})
                     li.tariffs__item
                         .tariffs__item-wrapper
@@ -33,7 +33,7 @@ mixin tariffs
                                 li.tariffs__item-advantages Поддержка модели FBO
                                 li.tariffs__item-advantages Поддержка модели FBS
                             span.tariffs__price 9 990 ₽
-                            +button('Выбрать').tariffs__button
+                            +button.tariffs__button Выбрать
                         +tariffs-form({name: 'question', title: 'Подключение тарифа "Pro"'})
                 ul.tariffs__list#one-month
                     li.tariffs__item
@@ -44,7 +44,7 @@ mixin tariffs
                                 li.tariffs__item-advantages Поддержка модели FBO
                                 li.tariffs__item-advantages Поддержка модели FBS
                             span.tariffs__price 799 ₽
-                            +button('Выбрать').tariffs__button
+                            +button.tariffs__button Выбрать
                         +tariffs-form({name: 'question', title: 'Подключение тарифа "Lite"'})
                     li.tariffs__item
                         .tariffs__item-wrapper
@@ -54,7 +54,7 @@ mixin tariffs
                                 li.tariffs__item-advantages Поддержка модели FBO
                                 li.tariffs__item-advantages Поддержка модели FBS
                             span.tariffs__price 1 999 ₽
-                            +button('Выбрать').tariffs__button
+                            +button.tariffs__button Выбрать
                         +tariffs-form({name: 'question', title: 'Подключение тарифа "Pro"'})
                 .tariffs__links
                     a(href="#").tariffs__link-all Смотреть все функции

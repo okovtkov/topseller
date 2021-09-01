@@ -1,53 +1,42 @@
 include ../svg-icon/svg-icon
 include ../positioner/positioner
 include ../title/title
+include ../update/update
 
 mixin updates
     section.updates
         +positioner.updates__container
             header.updates__header
-                +title('Новости и обновления').updates__title
+                +title.updates__title Новости и обновления
                 a.updates__link(href="#") Смотреть все новости
             .updates__cells-wrapper
                 .updates__line
-                .updates__cells
-                    .updates__cell
-                        .updates__wrapper
-                            .updates__status
-                                +svg-icon('complete')
-                        .updates__info
-                            h3.updates__heading Новое обновление
-                            p.updates__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere saepe illo est laudantium tenetur excepturi temporibus recusandae nam amet exercitationem, nulla, eius eligendi qui, magnam alias ipsum error! Pariatur, harum!
-                            .updates__time
-                                +svg-icon('time')
-                                span.updates__date 12.01.2021
-                            .updates__keywords
-                                span.updates__keyword обновление
-                                span.updates__keyword важное
-                    .updates__cell
-                        .updates__wrapper
-                            .updates__status
-                                +svg-icon('complete')
-                        .updates__info
-                            h3.updates__heading Важная информация
-                            p.updates__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere saepe illo est laudantium tenetur excepturi temporibus recusandae nam amet exercitationem, nulla, eius eligendi qui, magnam alias ipsum error! Pariatur, harum!
-                            .updates__time
-                                +svg-icon('time')
-                                span.updates__date 23.02.2021
-                            .updates__keywords
-                                span.updates__keyword новость
-                                span.updates__keyword клиентам
-                                span.updates__keyword важное
-                    .updates__cell
-                        .updates__wrapper
-                            .updates__status
-                                +svg-icon('timer')
-                        .updates__info
-                            h3.updates__heading Добавление функционала
-                            p.updates__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere saepe illo est laudantium tenetur excepturi temporibus recusandae nam amet exercitationem, nulla, eius eligendi qui, magnam alias ipsum error! Pariatur, harum!
-                            .updates__time
-                                +svg-icon('time-soon')
-                                span.updates__date.updates__date_soon Скоро
-                            .updates__keywords
-                                span.updates__keyword обновление
-                                span.updates__keyword важное
+                ul.updates__cells
+                    +update({
+                        tag: 'li',
+                        status: 'complete',
+                        title: 'Новое обновление',
+                        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere saepe illo est laudantium tenetur excepturi temporibus recusandae nam amet exercitationem, nulla, eius eligendi qui, magnam alias ipsum error! Pariatur, harum!',
+                        icon: 'time',
+                        date: '12.01.2021',
+                        keywords: ['обновление', 'важное']
+                    }).updates__cell
+                    +update({
+                        tag: 'li',
+                        status: 'complete',
+                        title: 'Важная информация',
+                        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere saepe illo est laudantium tenetur excepturi temporibus recusandae nam amet exercitationem, nulla, eius eligendi qui, magnam alias ipsum error! Pariatur, harum!',
+                        icon: 'time',
+                        date: '23.02.2021',
+                        keywords: ['новость', 'клиентам', 'важное']
+                    }).updates__cell
+                    +update({
+                        tag: 'li',
+                        status: 'timer',
+                        title: 'Добавление функционала',
+                        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere saepe illo est laudantium tenetur excepturi temporibus recusandae nam amet exercitationem, nulla, eius eligendi qui, magnam alias ipsum error! Pariatur, harum!',
+                        icon: 'time-soon',
+                        date: 'Скоро',
+                        soon: true,
+                        keywords: ['обновление', 'важное']
+                    }).updates__cell

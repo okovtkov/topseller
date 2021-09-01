@@ -1,28 +1,18 @@
 include ../positioner/positioner
+include ../accordion/accordion
+include ../scroll/scroll
 
 mixin possibilities
     section.possibilities#possibilities
         +positioner
-            +title('Возможности').possibilities__title
+            +title.possibilities__title Возможности
             .possibilities__wrapper
-                .possibilities__container
-                    img(src="/img/possibilities.jpg", alt="возможности").possibilities__image.possibilities__image_pc
-                    img(src="/img/posibilities.jpg", alt="возможности").possibilities__image.possibilities__image_mob
-                ul.possibilities__list
-                    li.possibilities__item
-                        button.possibilities__button Все в одном месте
-                        p.possibilities__text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, reiciendis rem iure amet ducimus culpa eum a quo rerum ipsam, omnis dolore magnam quaerat quis saepe molestias maxime dicta pariatur.
-                    li.possibilities__item
-                        button.possibilities__button Статусы
-                        p.possibilities__text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, reiciendis rem iure amet ducimus culpa eum a quo rerum ipsam, omnis dolore magnam quaerat quis saepe molestias maxime dicta pariatur.
-                    li.possibilities__item
-                        button.possibilities__button Заказы
-                        p.possibilities__text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, reiciendis rem iure amet ducimus culpa eum a quo rerum ipsam, omnis dolore magnam quaerat quis saepe molestias maxime dicta pariatur.
-                    li.possibilities__item
-                        button.possibilities__button Отгрузки
-                        p.possibilities__text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, reiciendis rem iure amet ducimus culpa eum a quo rerum ipsam, omnis dolore magnam quaerat quis saepe molestias maxime dicta pariatur.
-                    li.possibilities__item
-                        button.possibilities__button Комиссии
-                        p.possibilities__text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, reiciendis rem iure amet ducimus culpa eum a quo rerum ipsam, omnis dolore magnam quaerat quis saepe molestias maxime dicta pariatur.
-                .possibilities__pages
-                    .possibilities__slider
+                picture.possibilities__container
+                    source(srcset="/img/possibilities.jpg" media="(min-width: 1024px)").possibilities__image
+                    img(src="/img/posibilities.jpg", alt="возможности").possibilities__image
+                +accordion([{title: 'Все в одном месте', text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, reiciendis rem iure amet ducimus culpa eum a quo rerum ipsam, omnis dolore magnam quaerat quis saepe molestias maxime dicta pariatur.'},
+                {title: 'Статусы', text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, reiciendis rem iure amet ducimus culpa eum a quo rerum ipsam, omnis dolore magnam quaerat quis saepe molestias maxime dicta pariatur.'},
+                {title: 'Заказы', text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, reiciendis rem iure amet ducimus culpa eum a quo rerum ipsam, omnis dolore magnam quaerat quis saepe molestias maxime dicta pariatur.'},
+                {title: 'Отгрузки', text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, reiciendis rem iure amet ducimus culpa eum a quo rerum ipsam, omnis dolore magnam quaerat quis saepe molestias maxime dicta pariatur.'},
+                {title: 'Комиссии', text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, reiciendis rem iure amet ducimus culpa eum a quo rerum ipsam, omnis dolore magnam quaerat quis saepe molestias maxime dicta pariatur.'}]).possibilities__list
+                +scroll
